@@ -15,6 +15,10 @@ import './index.css';
 
 
 function App() {
+  const [color, setcolor] = useState("Blue")
+  const click = color => {
+    setcolor(color)
+  }
   return (
     <main className="flex flex-1 h-screen">
     <Routes>
