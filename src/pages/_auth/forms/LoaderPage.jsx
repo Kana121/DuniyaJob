@@ -9,8 +9,8 @@ import bg from "../../../assets/Loader_bg.png"
 
 const LoaderPage = () => {
   const navigate = useNavigate();
-  const navigateToDuniya = () => {
-    navigate('/Duniya');
+  const navigateToHome = () => {
+    navigate('/Home');
   };
   
   return (
@@ -31,7 +31,7 @@ const LoaderPage = () => {
             </div>
 
             <div className=" mt-28">
-              <Button variant="contained" onClick={navigateToDuniya}>
+              <Button variant="contained" onClick={navigateToHome}>
                 Get Started ⇒
               </Button>
             </div>
