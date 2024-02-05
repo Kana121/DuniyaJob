@@ -16,10 +16,17 @@ const LandingPage = () => {
 
   return (
     <>
+
+    <section className=" overflow-y-scroll no-scrollbar">
+      <div className="sticky">
+        <Navbar />
+      </div>
+
       <section className="w-screen h-screen overflow-y-scroll no-scrollbar flex flex-col">
         <div className="sticky">
           <Navbar />
         </div>
+
 
         <div className="flex-1 mt-4 flex items-center justify-center">
           <div className="banner-img">
