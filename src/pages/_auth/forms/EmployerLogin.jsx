@@ -2,6 +2,7 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Typography } from '@mui/material';
 import React from 'react'
+import { Link } from 'react-router-dom';
 // import Typography from 'typography';
 
 const EmployerLogin = () => {
@@ -58,7 +59,9 @@ const EmployerLogin = () => {
         <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>
       </div>
       <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+        <Link to="/employer-sign-up">
         Don't have an account? <a className="text-red-600 hover:underline hover:underline-offset-4" href="#">Register</a>
+        </Link>
       </div>
     </div>
   </section>
