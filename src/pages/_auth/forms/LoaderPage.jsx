@@ -9,13 +9,13 @@ import bg from "../../../assets/Loader_bg.png"
 
 const LoaderPage = () => {
   const navigate = useNavigate();
-  const navigateToDuniya = () => {
-    navigate('/Duniya');
+  const navigateToHome = () => {
+    navigate('/Home');
   };
   
   return (
     <>
-      <img src={bg} alt="image" className=" flex h-2/3 w-full"/>  
+      {/* <img src={bg} alt="image" className=" flex h-2/3 w-full"/>   */}
       <div className=" bg-gray-900 w-full h-screen">
         <div className=" flex w-full text-right text-white font-mono">
           <div className="flex ">
@@ -23,15 +23,15 @@ const LoaderPage = () => {
           </div>
 
           <div className="flex-col ">
-            <div className="flex text-2xl align-middle mt-40">
-              Got Fired...?
+            <div className="flex text-2xl space-x-2 align-middle mt-40">
+            Elevate your career with the right job.
             </div>
-            <div className="flex space-x-3 text-6xl">
-              Ready to be hired...
+            <div className="flex space-x-3 text-5xl">
+            Your Future, Your Choice.
             </div>
 
             <div className=" mt-28">
-              <Button variant="contained" onClick={navigateToDuniya}>
+              <Button variant="contained" onClick={navigateToHome} >
                 Get Started ⇒
               </Button>
             </div>
