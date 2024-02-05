@@ -14,9 +14,16 @@
     overflow: hidden;
     font-style: italic;
     background-image: url("/src/assets/Loader_bg.png");
+
     /* background-repeat: no-repeat; */
 
+    background-size: cover;
+    background-position: center;
+   
+
+
 }
+
 
 .preloader .texts-container {
     display: flex;

@@ -6,6 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
+import { Link } from 'react-router-dom';
 // import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
@@ -192,6 +193,7 @@ export default function Navbar() {
               color="inherit"
               spacing={'2px'}
               sx={{p:'10px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)', }} 
+              component={Link} to="/employee-login"
             >
                
                 <Typography>Employee Authentication</Typography>
@@ -202,6 +204,7 @@ export default function Navbar() {
               size="large"
               color="inherit"
               sx={{p:'10px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)'}}
+              component={Link} to="/employer-login"
             >
                 {/* <MailIcon /> */}
                 <Typography>Employer Authentication</Typography>
@@ -242,9 +245,10 @@ export default function Navbar() {
               color="inherit"
               spacing={'2px'}
               sx={{p:'5px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)', }} 
+              component={Link} to="/employee-login"
             >
                 {/* <MailIcon /> */}
-                <Typography>Employer</Typography>
+                <Typography>Employee</Typography>
               
             </IconButton>
             
@@ -252,9 +256,10 @@ export default function Navbar() {
               size="large"
               color="inherit"
               sx={{p:'5px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)'}}
+              component={Link} to="/employer-login"
             >
                 {/* <MailIcon /> */}
-                <Typography>Employee</Typography>
+                <Typography>Employer</Typography>
               
             </IconButton>
 
