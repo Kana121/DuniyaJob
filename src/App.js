@@ -22,7 +22,7 @@ function App() {
       <Route element={<AuthLayout />}>
 
         {/* <Route path="/Employee sign-up" element={<EmployeeSignup />} /> */}
-        <Route  path="/Duniya" element={<LandingPage />} />
+        <Route  path="/Home" element={<LandingPage />} />
         <Route index path="/" element={<LoaderPage />} />
 
       {/* Employee ........... */}
