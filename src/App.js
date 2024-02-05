@@ -48,7 +48,7 @@ function App() {
         <Route path="/update-profile/:id" element={<UpdateProfile />} />
         <Route path="/chat/:id/" element={<Chat />} />
         <Route path="/chats/:id/" element={<ChatSection />}/> */}
-        <Route  element={<Home/>} />
+        <Route path="/Home" element={<Home/>} />
 
       </Route>
     </Routes>

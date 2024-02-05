@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const LandingPage = () => {
   return (
     <>
-    <section className=" w-screen overflow-y-scroll no-scrollbar">
+    <section className=" overflow-y-scroll no-scrollbar">
       <div className="sticky">
         <Navbar />
       </div>
