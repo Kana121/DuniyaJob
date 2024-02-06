@@ -1,5 +1,6 @@
 // import React from 'react'
 import { Outlet,Navigate } from "react-router-dom";
+import Navbar from "../../components/Navbar";
 
 const AuthLayout = () => {
 
@@ -8,12 +9,17 @@ const AuthLayout = () => {
   return (
     <>
       {isAuthenticated ? (
-        <Navigate to={"/"} />
+        <Navigate to={"/JobSearch"} />
       ) : (
         <>
-          <section className="flex flex-1 overflow-y-scroll no-scrollbar justify-center items-center flex-col py-5 ">
+        <div className="sticky">
+          <Navbar />
+        </div>
+          <section className="flex flex-1 overflow-y-scroll mt-10 no-scrollbar justify-center items-center flex-col py-5 ">
             <Outlet />
           </section>
+
+          {/* <div className=" text-white mt-20">hello</div> */}
           
         </>
       )}

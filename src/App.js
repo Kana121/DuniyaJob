@@ -13,6 +13,8 @@ import LandingPage from "./pages/_auth/forms/LandingPage";
 import Home from "./pages/_root/innerpages/Home";
 import './index.css';
 import LoaderPage from "./pages/_auth/forms/LoaderPage";
+import JobSearch from "./pages/_root/innerpages/JobSearch";
+import PostJobs from "./pages/_root/innerpages/PostJobs";
 
 function App() {
   return (
@@ -48,7 +50,10 @@ function App() {
         <Route path="/update-profile/:id" element={<UpdateProfile />} />
         <Route path="/chat/:id/" element={<Chat />} />
         <Route path="/chats/:id/" element={<ChatSection />}/> */}
-        <Route path="/Home" element={<Home/>} />
+        {/* <Route path="/Home" element={<Home/>} /> */}
+        <Route path="/JobSearch" element={<JobSearch/>} />
+        <Route path="/PostJob" element={<PostJobs/>} />
+        
 
       </Route>
     </Routes>
