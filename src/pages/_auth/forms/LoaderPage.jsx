@@ -16,13 +16,8 @@ const LoaderPage = () => {
   return (
     <>
       {/* <img src={bg} alt="image" className=" flex h-2/3 w-full"/>   */}
-
-      <div className=" bg-gray-900 h-[100vh] w-[100%] no-scrollbar">
-        <div className=" flex  text-right text-white font-mono">
-
       <div className=" bg-gray-900 w-full h-screen">
         <div className=" flex w-full text-right text-white font-mono">
-
           <div className="flex ">
             <img src={logo} alt="image" />
           </div>
