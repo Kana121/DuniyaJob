@@ -29,7 +29,7 @@ const LandingPage = () => {
                 <br />
                 <span>Right Companies</span>
               </h3>
-              <div className="small-tagline">
+              <div className=" sm:text-xl">
                 <p>Got fired..!! Get Ready to be hired</p>
               </div>
             </div>

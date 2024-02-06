@@ -1,16 +1,28 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Typography } from '@mui/material';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../../../components/Navbar';
 
 const EmployeeSignup = () => {
   return (
-    <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0">
-      <div className="md:w-1/3 max-[20]">
+
+    <>
+    <div className="sticky">
+          <Navbar />
+        </div>
+
+    
+    <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 mt-24 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-black rounded-lg sm:pt-32 ">
+      <div className="md:w-1/3 mt-40 text-white ">
+      <Typography sx={{pb:"10px",textAlign:"center"}}>
+      Employee Signup
+      </Typography>
         <img
           src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
           alt="Sample img" />
       </div>
-      <div className="md:w-1/3 max-w-sm">
+      <div className="md:w-1/3   bg-white p-12 rounded-lg">
 
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl" type="text" placeholder="Name" />
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="number" placeholder="Phone Number" />
@@ -74,6 +86,8 @@ const EmployeeSignup = () => {
         </div>
       </div>
     </section>
+
+    </>
   );
 }
 
