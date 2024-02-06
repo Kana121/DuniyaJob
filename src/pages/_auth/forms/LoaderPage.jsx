@@ -33,6 +33,7 @@ const LoaderPage = () => {
               <Button variant="contained" onClick={navigateToHome} >
                 Get Started ⇒
               </Button>
+              
             </div>
           </div>
         </div>
