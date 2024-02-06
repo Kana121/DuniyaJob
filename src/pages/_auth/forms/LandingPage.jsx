@@ -29,16 +29,20 @@ const LandingPage = () => {
                 <br />
                 <span>Right Companies</span>
               </h3>
-              <div className=" sm:text-xl">
+              <div className=" sm:text-xl text-gray-400">
                 <p>Got fired..!! Get Ready to be hired</p>
               </div>
             </div>
           </div>
         </div>
       
-
-      <div className="button mb-14" data-testid="btn">
+      <div className=' flex flex-row justify-center space-x-6 '>
+      <div className="button mb-28" data-testid="btn">
         <Link to="/Jobs">Browse Jobs</Link>
+      </div>
+      <div className="button mb-28" data-testid="btn">
+        <Link to="/Jobs">Post Jobs</Link>
+      </div>
       </div>
       </section>
 

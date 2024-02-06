@@ -12,7 +12,7 @@ import {
 
 const Footer = () => {
 	return (
-		<div className=" flex -mt-10">
+		<div className=" flex -mt-20">
 		<Box>
 			<h1
 				style={{
@@ -27,45 +27,48 @@ const Footer = () => {
 			<FooterContainer>
 				<Row>
 					<Column>
-						<Heading>About Us</Heading>
+						<Heading>SUPPORT</Heading>
 						<FooterLink href="#">
-							Aim
+							FAQ
 						</FooterLink>
 						<FooterLink href="#">
-							Vision
+						  	Terms & Conditions
 						</FooterLink>
 						<FooterLink href="#">
-							Testimonials
-						</FooterLink>
-					</Column>
-					<Column>
-						<Heading>Services</Heading>
-						<FooterLink href="#">
-							Writing
+							Contact Us
 						</FooterLink>
 						<FooterLink href="#">
-							Internships
-						</FooterLink>
-						<FooterLink href="#">
-							Coding
-						</FooterLink>
-						<FooterLink href="#">
-							Teaching
+							Request Demo
 						</FooterLink>
 					</Column>
 					<Column>
-						<Heading>Contact Us</Heading>
+						<Heading>OUR COMPANY</Heading>
 						<FooterLink href="#">
-							Uttar Pradesh
+						About Us
 						</FooterLink>
 						<FooterLink href="#">
-							Ahemdabad
+						Meet the Team
 						</FooterLink>
 						<FooterLink href="#">
-							Indore
+						Our News
 						</FooterLink>
 						<FooterLink href="#">
-							Mumbai
+						Our Blogs
+						</FooterLink>
+					</Column>
+					<Column>
+						<Heading>OUR SERVICE</Heading>
+						<FooterLink href="#">
+						Advertise with Us
+						</FooterLink>
+						<FooterLink href="#">
+						Customer Reviews
+						</FooterLink>
+						<FooterLink href="#">
+						Client Testimonials
+						</FooterLink>
+						<FooterLink href="#">
+							How it Works
 						</FooterLink>
 					</Column>
 					<Column>
