@@ -3,10 +3,18 @@
 import { Typography } from '@mui/material';
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Navbar from '../../../components/Navbar';
 // import Typography from 'typography';
 
 const EmployerLogin = () => {
   return (
+
+    <>
+
+<div className="sticky">
+          <Navbar />
+        </div>
+    
     <section className=" border-2 p-6 bg-black  rounded-lg flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 text-white " >
       {/* <div className='flex ml-10 '>Employer Login</div> */}
 
@@ -18,8 +26,8 @@ const EmployerLogin = () => {
       </div>
       <div className="md:w-1/3 max-w-sm border-2 p-5 rounded-lg bg-white shadow-md ">
         
-        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" type="text" placeholder="Email Address" />
-        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" placeholder="Password" />
+        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded text-black" type="text" placeholder="Email Address" />
+        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 text-black" type="password" placeholder="Password" />
         <div className="mt-4 flex justify-between font-semibold text-sm">
           <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
             <input className="mr-1" type="checkbox" />
@@ -85,6 +93,7 @@ const EmployerLogin = () => {
 
       </div>
     </section>
+    </>
   );
 }
 

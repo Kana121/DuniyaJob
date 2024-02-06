@@ -13,9 +13,7 @@ const AuthLayout = () => {
         <Navigate to={"/JobSearch"} />
       ) : (
         <>
-        <div className="sticky">
-          <Navbar />
-        </div>
+        
           <section className="flex flex-1 overflow-y-scroll mt-10 no-scrollbar justify-center items-center flex-col py-5 ">
             <Outlet />
           </section>
