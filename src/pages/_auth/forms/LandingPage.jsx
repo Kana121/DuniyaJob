@@ -35,7 +35,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
+      
 
       <div className="button mb-14" data-testid="btn">
         <Link to="/Jobs">Browse Jobs</Link>
