@@ -1,7 +1,6 @@
 // <<<<<<< HEAD
 // import Check from "./components/check";
 
-
 import { Route, Routes } from "react-router-dom";
 import AuthLayout from "./pages/_auth/AuthLayout";
 import RootLayout from "./pages/_root/RootLayout";
@@ -15,10 +14,18 @@ import './index.css';
 import LoaderPage from "./pages/_auth/forms/LoaderPage";
 import JobSearch from "./pages/_root/innerpages/JobSearch";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
+import Footer from '../src/components/Footer';
 
 function App() {
   return (
-    <main className="flex bg-gray-700 flex-1 h-screen">
+    <main className="flex bg-gray-700 flex-1 h-screen ">
+      <div>
+        <div style={{
+                    minHeight: "400px",
+                    color: "green",
+                    
+                }} className=" flex flex-row ">
+              
     <Routes>
       {/* public routes */}
       <Route element={<AuthLayout />}>
@@ -58,7 +65,12 @@ function App() {
       </Route>
     </Routes>
 
+            </div>
+            <Footer />
+        </div>
   </main>
+
+  
 
 // >>>>>>> 39dcba460153505831c5c3cb5a25c1ee308748e0
   );

@@ -167,12 +167,52 @@ export default function Navbar() {
           </IconButton> */}
           <img className=" h-16" src={logo} alt="image" />
           <Typography
-            variant="h8"
+            variant="h6"
             noWrap
-            component="div"
-            // sx={{ display: { xs: "none", sm: "block" } }}
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', sm: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 500,
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
           >
-            Duniya Jobs
+            Home
+          </Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', sm: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 500,
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            About-Us
+          </Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            component="a"
+            href="#app-bar-with-responsive-menu"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', sm: 'none', md: 'flex' },
+              fontFamily: 'monospace',
+              fontWeight: 500,
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+          >
+            Jobs-Category
           </Typography>
           {/* <Search>
             <SearchIconWrapper>
@@ -196,7 +236,7 @@ export default function Navbar() {
               component={Link} to="/employee-login"
             >
                
-                <Typography>Employee </Typography>
+                <Typography>Employee</Typography>
               
             </IconButton>
             
@@ -207,7 +247,7 @@ export default function Navbar() {
               component={Link} to="/employer-login"
             >
                 {/* <MailIcon /> */}
-                <Typography>Employer </Typography>
+                <Typography>Employer</Typography>
               
             </IconButton>
 
