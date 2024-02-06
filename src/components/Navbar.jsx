@@ -128,11 +128,11 @@ export default function Navbar() {
     >
     
       <MenuItem >
-        <Typography >Employee Authentication</Typography>
+        <Typography >Employee </Typography>
       </MenuItem>
 
       <MenuItem>
-        <Typography>Employer Authentication</Typography>
+        <Typography>Employer</Typography>
       </MenuItem>
 
 
@@ -156,16 +156,16 @@ export default function Navbar() {
     <Box sx={{ width:"auto",position:"sticky"}} >
       <AppBar position="fixed">
         <Toolbar>
-          <IconButton
+          {/* <IconButton
             size="large"
             edge="start"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2 }}
+            // sx={{ mr: 1 }}
           >
             <MenuIcon />
-          </IconButton>
-          <img className=" h-20" src={logo} alt="image" />
+          </IconButton> */}
+          <img className=" h-16" src={logo} alt="image" />
           <Typography
             variant="h6"
             noWrap
@@ -267,7 +267,7 @@ export default function Navbar() {
 
           </Box>
 
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ display: { xs: "flex" , md: "none" } }}>
             {/* <IconButton
               size="large"
               aria-label="show more"
@@ -295,7 +295,7 @@ export default function Navbar() {
             <IconButton
               size="large"
               color="inherit"
-              sx={{p:'5px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)'}}
+              sx={{p:'4px', border:'solid', borderRadius:3,backgroundColor:'rgba(0,0,0,0.5)'}}
               component={Link} to="/employer-login"
             >
                 {/* <MailIcon /> */}
