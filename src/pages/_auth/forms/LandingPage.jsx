@@ -16,17 +16,10 @@ const LandingPage = () => {
 
   return (
     <>
-
-    <section className=" overflow-y-scroll no-scrollbar">
-      <div className="sticky">
-        <Navbar />
-      </div>
-
       <section className="w-screen h-screen overflow-y-scroll no-scrollbar flex flex-col">
         <div className="sticky">
           <Navbar />
         </div>
-
 
         <div className="flex-1 mt-4 flex items-center justify-center">
           <div className="banner-img">
@@ -42,11 +35,11 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-      </section>
-
-      <div className="button mb-14" data-testid="btn">
+      <div className="button mb-14 " data-testid="btn">
         <Link to="/Jobs">Browse Jobs</Link>
       </div>
+      </section>
+
     </>
   );
 };

@@ -11,8 +11,8 @@ const PreLoader = () => {
     }, []);
     return ( 
     <>
-        <div className="preloader no-scrollbar">
-            <div className=' space-x-3 texts-container '>
+        <div className="preloader">
+            <div className='texts-container '>
                 <span > FIND  </span> 
                 <span > THE </span> 
                 <span > PERFECT  </span> 
