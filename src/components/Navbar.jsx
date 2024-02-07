@@ -178,6 +178,7 @@ export default function Navbar() {
               fontWeight: 500,
               color: 'inherit',
               textDecoration: 'none',
+              ":hover" :{textDecoration: 'underline'}
             }}
           >
             Home
@@ -194,6 +195,7 @@ export default function Navbar() {
               fontWeight: 500,
               color: 'inherit',
               textDecoration: 'none',
+              ":hover" :{textDecoration: 'underline'}
             }}
           >
             About-Us
@@ -210,6 +212,7 @@ export default function Navbar() {
               fontWeight: 500,
               color: 'inherit',
               textDecoration: 'none',
+              ":hover" :{textDecoration: 'underline'}
             }}
           >
             Jobs-Category

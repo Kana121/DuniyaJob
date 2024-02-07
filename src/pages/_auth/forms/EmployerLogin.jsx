@@ -15,7 +15,7 @@ const EmployerLogin = () => {
           <Navbar />
         </div>
     
-    <section className=" border-2 p-6 bg-black  rounded-lg flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 text-white " >
+    <section className=" border-2 p-6 bg-gray-900 w-screen  rounded-lg flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 text-white " >
       {/* <div className='flex ml-10 '>Employer Login</div> */}
 
       <div className="md:w-1/3 max-w-sm">
