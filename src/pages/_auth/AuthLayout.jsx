@@ -14,7 +14,7 @@ const AuthLayout = () => {
       ) : (
         <>
         
-          <section className="flex flex-1 overflow-y-scroll -mt-20 no-scrollbar justify-center items-center flex-col py-11 w-full ">
+          <section className="flex flex-1 overflow-y-scroll no-scrollbar justify-center items-center flex-col py-11 w-full ">
             <Outlet />
           </section>
 
