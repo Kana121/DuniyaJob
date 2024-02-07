@@ -13,7 +13,7 @@ const EmployeeSignup = () => {
         </div>
 
     
-    <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 mt-24 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-black rounded-lg sm:pt-32 ">
+    <section className="h-screen flex flex-col md:flex-row justify-center space-y-10 mt-24 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg ">
       <div className="md:w-1/3 mt-40 text-white ">
       <Typography sx={{pb:"10px",textAlign:"center"}}>
       Employee Signup

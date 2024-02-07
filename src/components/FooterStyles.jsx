@@ -26,7 +26,7 @@ export const Column = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: left;
-	margin-left: 60px;
+	margin-left: 90px;
 `;
 
 export const Row = styled.div`
@@ -63,3 +63,11 @@ export const Heading = styled.p`
 	margin-bottom: 20px;
 	font-weight: bold;
 `;
+
+export const Icon_row = styled.div`
+	font-size: 16px;
+	color: gray;
+	margin-left: 10px;
+	margin-top: 35px;
+`;
+
