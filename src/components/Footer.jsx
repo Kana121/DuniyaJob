@@ -19,7 +19,7 @@ import Button from "@mui/material/Button";
 
 const Footer = () => {
 	return (
-		<div className=" flex -mt-20">
+		<div className=" flex -mt-14 ">
 		<Box>
 			<h2 style={{
 					color: "white",

@@ -14,10 +14,10 @@ const EmployeeLogin = () => {
           <Navbar />
         </div>
     
-    <section className=" border-2 p-6 bg-black  rounded-lg flex flex-col md:flex-row justify-center space-y-10 md:space-y-0 md:space-x-16 items-center my-2 mx-5 md:mx-0 md:my-0 text-white " > 
+    <section className="flex flex-col md:flex-row justify-center space-y-10 mt-40 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg" > 
     {/* <div className='flex ml-10 '>Employer Login</div> */}
-    
-    <div className="md:w-1/3 max-w-sm">
+
+    <div className=" md:w-1/3 mt-36 text-white ">
       <img
         src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
         alt="Sample img" />
@@ -56,10 +56,10 @@ const EmployeeLogin = () => {
       <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded text-black" type="text" placeholder="Email Address" />
       <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 text-black" type="password" placeholder="Password" />
       <div className="mt-4 flex justify-between font-semibold text-sm">
-        <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
+        {/* <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
           <input className="mr-1" type="checkbox" />
           <span>Remember Me</span>
-        </label>
+        </label> */}
         <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
       </div>
       <div className="text-center md:text-left">
@@ -75,6 +75,5 @@ const EmployeeLogin = () => {
   </>
 );
 }
-
 
 export default EmployeeLogin
