@@ -1,24 +1,30 @@
 import React, { useEffect } from 'react'
-import { preLoaderAnim } from '../animations';
+import { preLoaderAnim } from '../animations/'
+// import logo from '../../src/assets/dj-white.png'
+import "./preloader.css"
+
 
 const PreLoader = () => {
- 
-  useEffect(()=>{
-      preLoaderAnim()
-  },[]);  
-  return (
-    
-        <div className=' text-white text-center h-screen justify-center 
-                          items-center flex flex-row space-x-6 text-5xl 
-                          font-semibold font-mono letter-spacing: 0.025em z-50 overflow-hidden'>
-          <span>Find </span>
-          <span>the </span>
-          <span>perfect </span>
-          <span>jobs </span>
-          <span>here </span>
-          <span>. . . .</span>    
-        </div>
-  )
+
+    useEffect(() => {
+        preLoaderAnim();
+    }, []);
+    return ( 
+    <>
+        <div className="preloader no-scrollbar">
+            <div className='space-x-3 texts-container '>
+                <span > FIND  </span> 
+                <span > THE </span> 
+                <span > PERFECT  </span> 
+                <span > JOBS  </span> 
+                <span > HERE  </span> 
+                <span > ....  </span>     
+            </div>
+        </div> 
+
+        
+    </>
+    )
 }
 
 export default PreLoader

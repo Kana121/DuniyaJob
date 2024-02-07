@@ -11,8 +11,10 @@ import EmployerLogin from "./pages/_auth/forms/EmployerLogin";
 import LandingPage from "./pages/_auth/forms/LandingPage";
 import Home from "./pages/_root/innerpages/Home";
 import './index.css';
-
-
+import LoaderPage from "./pages/_auth/forms/LoaderPage";
+import JobSearch from "./pages/_root/innerpages/JobSearch";
+import PostJobs from "./pages/_root/innerpages/PostJobs";
+import Footer from '../src/components/Footer';
 
 function App() {
   const [color, setcolor] = useState("Blue")
@@ -20,13 +22,21 @@ function App() {
     setcolor(color)
   }
   return (
-    <main className="flex flex-1 h-screen">
+    <main className="flex bg-gray-700 flex-1 h-screen ">
+      <div>
+        <div style={{
+                    minHeight: "400px",
+                    color: "green",
+                    
+                }} className=" flex flex-row ">
+              
     <Routes>
       {/* public routes */}
       <Route element={<AuthLayout />}>
 
         {/* <Route path="/Employee sign-up" element={<EmployeeSignup />} /> */}
-        <Route path="/Duniya" element={<LandingPage />} />
+        <Route  path="/Home" element={<LandingPage />} />
+        <Route index path="/" element={<LoaderPage />} />
 
       {/* Employee ........... */}
         <Route path="/Employee-sign-up" element={<EmployeeSignup />} />
@@ -51,15 +61,20 @@ function App() {
         <Route path="/update-profile/:id" element={<UpdateProfile />} />
         <Route path="/chat/:id/" element={<Chat />} />
         <Route path="/chats/:id/" element={<ChatSection />}/> */}
-        <Route index element={<Home/>} />
+        {/* <Route path="/Home" element={<Home/>} /> */}
+        <Route path="/JobSearch" element={<JobSearch/>} />
+        <Route path="/PostJob" element={<PostJobs/>} />
+        
 
       </Route>
     </Routes>
 
-    {/* <Toaster /> */}
-
-
+            </div>
+            <Footer />
+        </div>
   </main>
+
+  
 
 // >>>>>>> 39dcba460153505831c5c3cb5a25c1ee308748e0
   );
