@@ -28,7 +28,7 @@ function App() {
   //   setcolor(color)
   // }
   return (
-    <main className="flex bg-pink-900 flex-1 bg-bgimage h-full overflow-y-scroll justify-center align-middle ">
+    <main className="bg-pink-900 flex-1 bg-bgimage overflow-y-scroll justify-center align-middle ">
       <div>
         
               
