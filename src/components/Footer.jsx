@@ -9,18 +9,31 @@ import {
 
 const sections = [
   {
-    
-    items: ["FAQ", "About-Us", "Careers", "Employee-Home", ],
+    title: "Company",
+    items: [
+      { name: "FAQ", link: "/faq" },
+      { name: "About Us", link: "/about-us" },
+      { name: "Careers", link: "/careers" },
+      { name: "Employee Home", link: "/employee-home" }
+    ]
   },
   {
-    
-    items: ["Help-Center", "Notices", "Notifications", ],
+    title: "Help",
+    items: [
+      { name: "Help Center", link: "/help-center" },
+      { name: "Notices", link: "/notices" },
+      { name: "Notifications", link: "/notifications" }
+    ]
   },
   {
-    
-    items: ["Privacy Policy", "Terms and Conditions", "Fraud Alerts", "Report an Issue",],
-  },
-  
+    title: "Legal",
+    items: [
+      { name: "Privacy Policy", link: "/privacy-policy" },
+      { name: "Terms and Conditions", link: "/terms-and-conditions" },
+      { name: "Fraud Alerts", link: "/fraud-alerts" },
+      { name: "Report an Issue", link: "/report-an-issue" }
+    ]
+  }
 ];
 
 const items = [
@@ -41,7 +54,7 @@ const Footer = () => {
             <ul>
               {section.items.map((item, i) => (
                 <li key={i} className="py-1 text-gray-500 hover:text-white">
-                  {item}
+                  <a href={item.link}>{item.name}</a>
                 </li>
               ))}
             </ul>

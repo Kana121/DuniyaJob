@@ -13,7 +13,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'bgimage': "url('C:/Users/raksh/OneDrive/Desktop/Documents/GitHub/DuniyaJob/src/assets/backbg.jpg')",
+        'bgimage': "url('/src/assets/backbg.jpg')",
 
         // 'footer-texture': "url('/img/footer-texture.png')",
       }
