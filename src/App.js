@@ -23,8 +23,12 @@ import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
 
 function App() {
+  // const [color, setcolor] = useState("Blue")
+  // const click = color => {
+  //   setcolor(color)
+  // }
   return (
-    <main className="flex bg-gray-700 flex-1 h-full justify-center align-middle ">
+    <main className="flex bg-pink-900 flex-1 bg-bgimage h-full overflow-y-scroll justify-center align-middle ">
       <div>
         
               
