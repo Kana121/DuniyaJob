@@ -29,7 +29,7 @@ function App() {
                     // minHeight: "400px",
                     // color: "green",
                 }} 
-                className=" flex flex-row "
+                // className=" flex flex-row "
                 >
               
     <Routes>

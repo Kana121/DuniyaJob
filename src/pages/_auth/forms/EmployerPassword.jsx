@@ -23,7 +23,6 @@ const EmployerPassword = () => {
       </div>
       <div className="md:w-1/3  bg-white p-12 rounded-lg">
 
-        
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="password" placeholder="Password" />
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="password" placeholder="Confirm Password" />
 
