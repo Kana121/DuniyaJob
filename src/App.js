@@ -17,6 +17,9 @@ import PostJobs from "./pages/_root/innerpages/PostJobs";
 import Footer from '../src/components/Footer';
 import OTPPage from "./pages/_auth/forms/OTPPage";
 import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
+import Employer_OTP from "./pages/_auth/forms/Employer_OTP";
+import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
+import FAQPage from "./pages/_root/footerpages/FAQPage";
 
 function App() {
   const [color, setcolor] = useState("Blue")
@@ -48,7 +51,9 @@ function App() {
         <Route path="/Employer-sign-up" element={<EmployerSignup />} />
         <Route path="/Employer-login" element={<EmployerLogin />} />
         <Route path="/otp" element={<OTPPage />}/>
-        <Route path="/set-password" element={<EmployeePassword />}/>
+        <Route path="/employer-verification-otp" element={<Employer_OTP />}/>
+        <Route path="/Employee-set-password" element={<EmployeePassword />}/>
+        <Route path="/Employer-set-password" element={<EmployerPassword />}/>
 
       </Route>
 
@@ -69,8 +74,9 @@ function App() {
         {/* <Route path="/Home" element={<Home/>} /> */}
         <Route path="/JobSearch" element={<JobSearch/>} />
         <Route path="/PostJob" element={<PostJobs/>} />
+        <Route path="/FAQ" element={<FAQPage />}/> 
         
-
+        
       </Route>
     </Routes>
 
