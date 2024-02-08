@@ -12,17 +12,16 @@ const PreLoader = () => {
     return ( 
     <>
         <div className="preloader no-scrollbar">
-            <div className='space-x-3 texts-container '>
-                <span > FIND  </span> 
-                <span > THE </span> 
-                <span > PERFECT  </span> 
-                <span > JOBS  </span> 
-                <span > HERE  </span> 
-                <span > ....  </span>     
+            <div className='space-x-3 texts-container  '>
+                <span className=" text-blue-500" > FIND  </span> 
+                <span className=" text-blue-500"> THE </span> 
+                <span className=" text-blue-500"> PERFECT  </span> 
+                <span className=" text-blue-500"> JOBS  </span> 
+                <span className=" text-blue-500"> HERE  </span> 
+                <span className=" text-blue-500"> ....  </span>     
             </div>
         </div> 
 
-        
     </>
     )
 }
