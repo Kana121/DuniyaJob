@@ -72,6 +72,7 @@ function App() {
         <Route path="/PostJob" element={<PostJobs/>} />
         <Route path="/FAQ" element={<FAQPage />}/> 
         
+        
       </Route>
     </Routes>
 

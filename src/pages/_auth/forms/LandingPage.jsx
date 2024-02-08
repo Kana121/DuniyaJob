@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from '../../../components/Navbar';
 import '../../../styles/landing.css';  // Ensure that Tailwind CSS styles are imported
 import { Link } from 'react-router-dom';
+import Footer from '../../../components/Footer';
 
 const LandingPage = () => {
   useEffect(() => {
@@ -16,6 +17,8 @@ const LandingPage = () => {
 
   return (
     <>
+    <div className=' overflow-y-scroll no-scrollbar'>
+      
       <section className="w-screen h-screen overflow-y-scroll no-scrollbar flex flex-col">
         <div className="sticky">
           <Navbar />
@@ -38,13 +41,17 @@ const LandingPage = () => {
       
       <div className=' flex flex-row justify-center space-x-6 '>
       <div className="button mb-28" data-testid="btn">
-        <Link to="/Jobs">Browse Jobs</Link>
+        <Link to="/JobSearch">Browse Jobs</Link>
       </div>
       <div className="button mb-28" data-testid="btn">
         <Link to="/Jobs">Post Jobs</Link>
       </div>
       </div>
       </section>
+
+      <Footer />
+
+    </div>
 
     </>
   );
