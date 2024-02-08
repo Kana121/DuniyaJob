@@ -69,6 +69,7 @@ function App() {
         <Route path="/FAQ" element={<FAQPage />}/> 
         <Route path="/About-us" element={<AboutUs/>}/>
         
+        
       </Route>
     </Routes>
 

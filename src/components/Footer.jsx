@@ -1,122 +1,79 @@
-// Filename - components/Footer.js
-
 import React from "react";
 import {
-	Box,
-	FooterContainer,
-	Row,
-	Column,
-	FooterLink,
-	Heading,
-	Icon_row,
-} from "./FooterStyles";
-import fb from '../assets/facebook.png';
-import ig from '../assets/instagram.png';
-import ln from '../assets/linkedin.png';
-import yt from '../assets/youtube.png';
-import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaTwitter,
+  FaTwitch,
+} from "react-icons/fa";
+
+const sections = [
+  {
+    
+    items: ["FAQ", "About-Us", "Careers", "Employee-Home", ],
+  },
+  {
+    
+    items: ["Help-Center", "Notices", "Notifications", ],
+  },
+  {
+    
+    items: ["Privacy Policy", "Terms and Conditions", "Fraud Alerts", "Report an Issue",],
+  },
+  
+];
+
+const items = [
+  { name: "Facebook", icon: FaFacebook, link: "https://www.facebook.com/" },
+  { name: "Instagram", icon: FaInstagram, link: "https://www.instagram.com/" },
+  { name: "Twitter", icon: FaTwitter, link: "https://twitter.com/" },
+  { name: "Twitch", icon: FaTwitch, link: "https://www.twitch.tv/" },
+  { name: "Github", icon: FaGithub, link: "https://github.com/" },
+];
 
 const Footer = () => {
-	return (
-		<div className=" flex -mt-14 ">
-		<Box>
-			<h2 style={{
-					color: "white",
-					textAlign: "left",
-					marginTop: "3px",
-					marginBottom: "3px",
-					fontFamily: "monospace",
-					fontSize:"25px",
-					fontWeight: "bold",}}>
-					We are here to help you in finding jobs. </h2>
-					
-			<Button> Help Centre</Button>
-			
-			<h1
-				style={{
-					color: "Lightblue",
-					textAlign: "center",
-					marginTop: "2px",
-					marginBottom: "60px",
-					fontSize: "18px",
-				}}
-			>
-				A Job Portal for Job Seekers!
-			</h1 >
-			
-			<FooterContainer>
-				<Row>
-					<Column>
-						<Heading>SUPPORT</Heading>
-						<FooterLink href="#">
-							FAQ
-						</FooterLink>
-						<FooterLink href="#">
-						  	Terms & Conditions
-						</FooterLink>
-						<FooterLink href="#">
-							Contact Us
-						</FooterLink>
-						<FooterLink href="#">
-							Request Demo
-						</FooterLink>
-					</Column>
-					<Column>
-						<Heading>OUR COMPANY</Heading>
-						<FooterLink href="#">
-							About Us
-						</FooterLink>
-						<FooterLink href="#">
-							Meet the Team
-						</FooterLink>
-						<FooterLink href="#">
-							Our News
-						</FooterLink>
-						<FooterLink href="#">
-							Our Blogs
-						</FooterLink>
-					</Column>
-					<Column>
-						<Heading>OUR SERVICE</Heading>
-						<FooterLink href="#">
-							Advertise with Us
-						</FooterLink>
-						<FooterLink href="#">
-							Customer Reviews
-						</FooterLink>
-						<FooterLink href="#">
-							Client Testimonials
-						</FooterLink>
-						<FooterLink href="#">
-							How it Works
-						</FooterLink>
-					</Column>
-					
-				</Row>
-			</FooterContainer>
-			<Icon_row>
-			All rights reserved @ 2022 MiroDen Software Solution Pvt. Ltd.
-			<div className=" flex flex-row space-x-2 -mb-4">
-			<Link to="">
-        		<img src={fb} alt="facebook" className=" h-10"/>
-      		</Link>
-			  <Link to="">
-        		<img src={ig} alt="instagram" className=" h-10" />
-      		</Link>
-			  <Link to="">
-        		<img src={ln} alt="linkedin" className=" h-10"/>
-      		</Link>
-			  <Link to="">
-        		<img src={yt} alt="youtube" className=" h-10 "/>
-      		</Link>
-			
+  return (
+    <div className="w-full mt-24 bg-slate-900 text-gray-300 py-y px-2">
+      <div className="max-w-[1240px] mx-auto grid grid-cols-2 md:grid-cols-6 border-b-2 border-gray-600 py-8">
+        {sections.map((section, index) => (
+          <div key={index}>
+            <h6 className="font-bold uppercase pt-2">{section.title}</h6>
+            <ul>
+              {section.items.map((item, i) => (
+                <li key={i} className="py-1 text-gray-500 hover:text-white">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
 
-			</div>
-			</Icon_row> 
-		</Box>
-		</div>
-	);
+        <div className="col-span-2 pt-8 md:pt-2">
+          <p className="font-bold uppercase">Subscribe to our newsletter</p>
+          <p className="py-4">
+            The latest news, articles, and resources, sent to your inbox weekly.
+          </p>
+          <form className="flex flex-col sm:flex-row">
+            <input
+              className="w-full p-2 mr-4 rounded-md mb-4"
+              type="email"
+              placeholder="Enter email.."
+            />
+            <button className="p-2 mb-4">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div className="flex flex-col max-w-[1240px] px-2 py-4 mx-auto justify-between sm:flex-row text-center text-gray-500">
+        <p className="py-4">2022 Workflow, LLC. All rights reserved</p>
+        <div className="flex justify-between sm:w-[300px] pt-4 text-2xl">
+          {items.map((x, index) => {
+            return <x.icon key={index} className="hover:text-white" />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
 };
-export default Footer;
 
+export default Footer;
