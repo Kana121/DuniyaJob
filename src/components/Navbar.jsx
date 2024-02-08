@@ -187,7 +187,7 @@ export default function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/About-us"
             sx={{
               mr: 2,
               display: { xs: 'none', sm: 'none', md: 'flex' },
