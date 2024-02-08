@@ -15,6 +15,8 @@ import LoaderPage from "./pages/_auth/forms/LoaderPage";
 import JobSearch from "./pages/_root/innerpages/JobSearch";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
 import Footer from '../src/components/Footer';
+import OTPPage from "./pages/_auth/forms/OTPPage";
+import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
 
 function App() {
   const [color, setcolor] = useState("Blue")
@@ -22,13 +24,14 @@ function App() {
     setcolor(color)
   }
   return (
-    <main className="flex bg-gray-700 flex-1 h-screen ">
+    <main className="flex bg-gray-700 flex-1 h-full justify-center align-middle ">
       <div>
         <div style={{
-                    minHeight: "400px",
-                    color: "green",
-                    
-                }} className=" flex flex-row ">
+                    // minHeight: "400px",
+                    // color: "green",
+                }} 
+                className=" flex flex-row "
+                >
               
     <Routes>
       {/* public routes */}
@@ -44,6 +47,8 @@ function App() {
       {/* Employer ............ */}
         <Route path="/Employer-sign-up" element={<EmployerSignup />} />
         <Route path="/Employer-login" element={<EmployerLogin />} />
+        <Route path="/otp" element={<OTPPage />}/>
+        <Route path="/set-password" element={<EmployeePassword />}/>
 
       </Route>
 
@@ -70,7 +75,11 @@ function App() {
     </Routes>
 
             </div>
-            <Footer />
+          
+            {/* <Footer /> */}
+
+
+        
         </div>
   </main>
 
