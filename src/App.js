@@ -21,6 +21,7 @@ import Employer_OTP from "./pages/_auth/forms/Employer_OTP";
 import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
 import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
+import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -50,6 +51,7 @@ function App() {
         <Route path="/employer-verification-otp" element={<Employer_OTP />}/>
         <Route path="/Employee-set-password" element={<EmployeePassword />}/>
         <Route path="/Employer-set-password" element={<EmployerPassword />}/>
+        <Route path="/forget-password" element={<ForgetPassword />}/>
 
       </Route>
 

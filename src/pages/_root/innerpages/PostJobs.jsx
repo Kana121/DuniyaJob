@@ -1,8 +1,14 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
 const PostJobs = () => {
   return (
-    <div>PostJobs</div>
+    <div>
+      <Box >
+        hello
+      </Box>
+    </div>
+    
   )
 }
 

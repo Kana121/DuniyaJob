@@ -44,7 +44,7 @@ const LandingPage = () => {
         <Link to="/JobSearch">Browse Jobs</Link>
       </div>
       <div className="button mb-28" data-testid="btn">
-        <Link to="/Jobs">Post Jobs</Link>
+        <Link to="/PostJob">Post Jobs</Link>
       </div>
       </div>
       </section>
