@@ -30,7 +30,6 @@ const EmployerLogin = () => {
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="number" placeholder="Phone Number" />
         <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="email" placeholder="Email Address" />
         
-
         {/* <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer mt-2">
           <input className="mr-1" type="checkbox" />
           <span>Remember Me</span>
@@ -45,8 +44,8 @@ const EmployerLogin = () => {
         <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
           <p className="mx-4 mb-0 text-center font-semibold text-slate-500">Or</p>
         </div>
-        <div className="text-center md:text-left">
-          <label className="mr-1">Sign in with</label>
+        <div className="text-center md:text-left ">
+          <label className="mr-1 text-black" >Sign in with :</label>
           <button
             type="button"
             className="mx-1 h-9 w-9 rounded-full ml-2 bg-blue-600 hover:bg-blue-700 text-white shadow-[0_4px_9px_-4px_#3b71ca]">
@@ -88,11 +87,7 @@ const EmployerLogin = () => {
             </button>
 
           </div>
-          <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
-            <Link to="/employer-sign-up">
-              Don't have an account? <a className="text-red-600 hover:underline hover:underline-offset-4" href="#">Register</a>
-            </Link>
-          </div>
+          
 
         </div>
       </section>

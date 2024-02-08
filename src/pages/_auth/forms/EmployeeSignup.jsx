@@ -30,7 +30,7 @@ const EmployeeSignup = () => {
 
         <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer mt-2">
           <input className="mr-1" type="checkbox" />
-          <span>Remember Me</span>
+          <span className=' text-black'>Remember Me</span>
         </label>
         <div className="text-center md:text-left">
           <Link to="/otp">

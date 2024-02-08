@@ -39,9 +39,9 @@ const EmployeeLogin = () => {
       <div className="mt-4 flex justify-between font-semibold text-sm">
         <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
           <input className="mr-1" type="checkbox" />
-          <span>Remember Me</span>
+          <span className='text-black'>Remember Me</span>
         </label>
-        <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
+        <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="/forget-password">Forgot Password?</a>
       </div>
       <div className="text-center md:text-left">
         <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>

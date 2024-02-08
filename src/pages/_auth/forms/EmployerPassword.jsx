@@ -11,7 +11,7 @@ const EmployerPassword = () => {
           <Navbar />
         </div>
 
-    <section className="h-full flex flex-col md:flex-row justify-center space-y-10 mt-40 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg ">
+    <section className="h-full flex flex-col md:flex-row justify-center space-y-10 mt-16 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg ">
       <div className="md:w-1/3 mt-36 text-white ">
       <Typography sx={{pb:"10px",textAlign:"center"}}>
       Employer Signup
@@ -28,7 +28,7 @@ const EmployerPassword = () => {
 
         <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer mt-2">
           <input className="mr-1" type="checkbox" />
-          <span>Remember Me</span>
+          <span className='text-black'>Remember Me</span>
         </label>
         <div className="text-center md:text-left">
           <Link to="/Home">
