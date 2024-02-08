@@ -20,17 +20,17 @@ import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
 import Employer_OTP from "./pages/_auth/forms/Employer_OTP";
 import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
 import FAQPage from "./pages/_root/footerpages/FAQPage";
+import AboutUs from "./pages/_root/footerpages/AboutUs";
 
 function App() {
+  // const [color, setcolor] = useState("Blue")
+  // const click = color => {
+  //   setcolor(color)
+  // }
   return (
-    <main className="flex bg-gray-700 flex-1 h-full justify-center align-middle ">
+    <main className="flex bg-pink-900 flex-1 bg-bgimage h-full overflow-y-scroll justify-center align-middle ">
       <div>
-        <div style={{
-                    // minHeight: "400px",
-                    // color: "green",
-                }} 
-                // className=" flex flex-row "
-                >
+        
               
     <Routes>
       {/* public routes */}
@@ -71,12 +71,13 @@ function App() {
         <Route path="/JobSearch" element={<JobSearch/>} />
         <Route path="/PostJob" element={<PostJobs/>} />
         <Route path="/FAQ" element={<FAQPage />}/> 
+        <Route path="/About-us" element={<AboutUs/>}/>
         
         
       </Route>
     </Routes>
 
-            </div>
+           
           
             {/* <Footer /> */}
 

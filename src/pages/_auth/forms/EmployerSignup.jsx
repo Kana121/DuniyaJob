@@ -1,15 +1,17 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Typography } from '@mui/material';
 import React from 'react'
 import { Link } from 'react-router-dom';
 import Navbar from '../../../components/Navbar';
+// import Typography from 'typography';
 
-const EmployerSignup = () => {
+const EmployerLogin = () => {
   return (
+
     <>
-    <div className="sticky">
-          <Navbar />
-        </div>
+
+      <div className="sticky">
+        <Navbar />
+      </div>
 
     <section className="h-full flex flex-col md:flex-row justify-center space-y-10 mt-16 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg ">
       <div className="md:w-1/3 mt-36 text-white ">
@@ -75,20 +77,28 @@ const EmployerSignup = () => {
             data-te-ripple-color="light"
             class="inlne-block mx-1 h-9 w-9 rounded-full ml-2 bg-blue-600 hover:bg-blue-700 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]">
 
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="mx-auto h-3.5 w-3.5"
-              fill="currentColor"
-              viewBox="0 0 24 24">
-              <path
-                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
-            </svg>
-          </button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="mx-auto h-3.5 w-3.5"
+                fill="currentColor"
+                viewBox="0 0 24 24">
+                <path
+                  d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+              </svg>
+            </button>
+
+          </div>
+          <div className="mt-4 font-semibold text-sm text-slate-500 text-center md:text-left">
+            <Link to="/employer-sign-up">
+              Don't have an account? <a className="text-red-600 hover:underline hover:underline-offset-4" href="#">Register</a>
+            </Link>
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
     </>
   );
 }
 
-export default EmployerSignup
+
+export default EmployerLogin

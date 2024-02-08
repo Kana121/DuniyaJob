@@ -1,9 +1,7 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-import { Typography } from '@mui/material';
 import React from 'react'
-import { Link } from 'react-router-dom';
 import Navbar from '../../../components/Navbar';
-
+import { Typography } from '@mui/material';
+import { Link } from "react-router-dom";
 const EmployeeSignup = () => {
   return (
 
