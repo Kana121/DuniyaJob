@@ -10,7 +10,10 @@
 
 
 import React from 'react'
+import { Link } from "react-router-dom";
 import { TEInput, TERipple } from "tw-elements-react";
+import Navbar from '../../../components/Navbar';
+import { Typography } from '@mui/material';
 const EmployeeLogin = () => {
   return(
     <>
