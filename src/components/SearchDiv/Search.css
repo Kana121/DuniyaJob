@@ -35,7 +35,7 @@
 input[type="text"]
 {
     background: transparent;
-    border: none;
+    border: 1px;
 	width: 100%;
 	outline: none;
 	color: rgb(218, 218, 218);
