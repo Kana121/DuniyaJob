@@ -9,7 +9,7 @@ const AboutUs = () => {
     <div className=' text-white justify-center mt-12 font-mono text-6xl'>ABOUT US</div>
     <div className='flex flex-col'>
       <div className=' flex'>
-       <img src={imagefirst} alt='image' className=' mt-10 align-middle justify-center ml-20 mr-20' height={"300px"} width={"300pxx"} />
+       <img src={imagefirst} alt='image' className=' mt-10 align-middle justify-center ml-20 mr-20 hover:opacity-0.75' height={"500px"} width={"500px"}  />
       </div>
       <div>
     <p className=' flex text-yellow-500 ml-32 mr-32 mt-7 text-xl font-serif'>
