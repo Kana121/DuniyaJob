@@ -68,7 +68,7 @@ const Footer = () => {
           </p>
           <form className="flex flex-col sm:flex-row">
             <input
-              className="w-full p-2 mr-4 rounded-md mb-4"
+              className="w-full p-2 text-gray-700 mr-4 rounded-md mb-4"
               type="email"
               placeholder="Enter email.."
             />
