@@ -1,7 +1,7 @@
 
 import React from 'react'
 import imagefirst from "../../../assets/img1.jpg"
-
+import Footer from "../../../components/Footer"
 const AboutUs = () => {
   return (
     <>
@@ -20,7 +20,9 @@ const AboutUs = () => {
     </p>
     </div>
     </div>
+    <Footer/>
     </div>
+
     </>
   )
 }
