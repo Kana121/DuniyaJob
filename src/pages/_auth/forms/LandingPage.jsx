@@ -5,21 +5,22 @@ import { Link } from 'react-router-dom';
 import Footer from '../../../components/Footer';
 
 const LandingPage = () => {
-  useEffect(() => {
-    // Apply Tailwind CSS class to the body element
-    document.body.classList.add('overflow-hidden');
+  // useEffect(() => {
+  //   // Apply Tailwind CSS class to the body element
+  //   document.body.classList.add('overflow-hidden');
 
-    // Clean up the class on component unmount
-    return () => {
-      document.body.classList.remove('overflow-hidden');
-    };
-  }, []); // Empty dependency array ensures that the effect runs only once
+  //   // Clean up the class on component unmount
+  //   return () => {
+  //     document.body.classList.remove('overflow-hidden');
+  //   };
+  // }, []); // Empty dependency array ensures that the effect runs only once
+
 
   return (
     <>
-    <div className=' overflow-y-scroll no-scrollbar'>
+    <div className=' overflow-y-scroll '>
       
-      <section className="w-screen h-screen overflow-y-scroll no-scrollbar flex flex-col">
+      <section className="w-screen h-screen flex flex-col">
         <div className="sticky">
           <Navbar />
         </div>
@@ -44,7 +45,7 @@ const LandingPage = () => {
         <Link to="/JobSearch">Browse Jobs</Link>
       </div>
       <div className="button mb-28" data-testid="btn">
-        <Link to="/Jobs">Post Jobs</Link>
+        <Link to="/PostJob">Post Jobs</Link>
       </div>
       </div>
       </section>

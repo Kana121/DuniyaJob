@@ -15,7 +15,7 @@ const EmployerLogin = () => {
         <Navbar />
       </div>
 
-      <section className="flex flex-col md:flex-row justify-center space-y-10 mt-40 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg " >
+      <section className="flex flex-col md:flex-row justify-center space-y-10 mt-16 mx-5 my-3 md:space-y-0 md:space-x-16 items-center  bg-gray-900 rounded-lg " >
         {/* <div className='flex ml-10 '>Employer Login</div> */}
 
         <div className=" md:w-1/3 mt-36 text-white  ">
@@ -26,14 +26,15 @@ const EmployerLogin = () => {
         </div>
         <div className="md:w-1/3 max-w-sm border-2 p-5 rounded-lg bg-white shadow-md ">
 
-          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded text-black" type="text" placeholder="Email Address" />
+          <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 text-black" type="email" placeholder="Email Address" />
           <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4 text-black" type="password" placeholder="Password" />
           <div className="mt-4 flex justify-between font-semibold text-sm">
             <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
               <input className="mr-1" type="checkbox" />
-              <span>Remember Me</span>
+              <span className='text-black'>Remember Me</span>
             </label>
-            <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="#">Forgot Password?</a>
+            <a className="text-blue-600 hover:text-blue-700 hover:underline hover:underline-offset-4" href="/forget-password">Forgot Password?</a>
+            
           </div>
           <div className="text-center md:text-left">
             <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Login</button>
