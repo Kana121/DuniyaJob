@@ -1,86 +1,222 @@
-import React, { useState } from "react";
-//import "../../../../src/pages/_root/innerpages/PostJob.css"; // Import your CSS file
+import React from "react";
+import { useState } from "react";
+import "./PostJobs.css"; // Assuming this file contains your custom styles
+import { useNavigate } from "react-router-dom";
+import Header from "../../../components/innerNavbar/Header";
 
-const AddJob = () => {
-  const [desc, setDesc] = useState("");
-  const [exp, setExp] = useState("");
-  const [profile, setProfile] = useState("");
-  const [techs, setTechs] = useState("");
+const PostJob = () => {
+  const [company, setCompany] = useState("");
+  const [logo, setLogo] = useState("");
+  const [position, setPosition] = useState("");
+  const [salary, setSalary] = useState("");
+  const [experience, setExperience] = useState("");
+  const [role, setRole] = useState("");
+  const [location, setLocation] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const newJob = {
-      desc: desc,
-      exp: parseInt(exp),
-      profile: profile,
-      techs: techs.split(",").map((tech) => tech.trim()),
+  const navigate = useNavigate();
+
+  const getBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onabort = (error) => reject(error);
+      reader.readAsDataURL(file);
+    });
+  };
+
+  const handleImg = (e) => {
+    const file = e.target.files[0];
+    getBase64(file).then((base64) => {
+      localStorage["logo"] = base64;
+      setLogo(base64);
+    });
+  };
+
+  const handleSubmitButton = (e) => {
+    const jobPost = {
+      company,
+      position,
+      salary,
+      experience,
+      role,
+      location,
+      logo
     };
-    console.log(newJob);
-
-    // Clear input fields after submission
-    setDesc("");
-    setExp("");
-    setProfile("");
-    setTechs("");
+    e.preventDefault();
+    if (company === "") {
+      window.alert("Enter name");
+    } else if (position === "") {
+      window.alert("Enter position");
+    } else if (experience === "") {
+      window.alert("Enter Experience");
+    } else if (salary === "") window.alert("Enter Salary");
+    else {
+      let savedItem = [];
+      if (localStorage.getItem("item")) {
+        savedItem = JSON.parse(localStorage.getItem("item"));
+      }
+      localStorage.setItem("item", JSON.stringify([...savedItem, { jobPost }]));
+      window.alert("Form Submitted Successfully");
+     // navigate("/Jobs");
+    }
   };
 
   return (
-    <div className="mx-auto max-w-lg px-4 py-8">
-      <p className="text-3xl font-semibold text-center mb-8">
-        Post New Job Opportunities
-      </p>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Description"
-            value={desc}
-            onChange={(e) => setDesc(e.target.value)}
-            className="input-field"
-            required
-          />
+    <div className=" justify-center align-middle" >
+      <Header />
+      <div className="job-background mt-20 ">
+        <div className="title text-center font-bold mt-10 ">
+          <h2 className="border rounded-lg backdrop-blur-lg p-2">Post a Job</h2>
         </div>
-        <div className="mb-4">
-          <input
-            type="number"
-            placeholder="Experience (years)"
-            value={exp}
-            onChange={(e) => setExp(e.target.value)}
-            className="input-field bg-white" // Add bg-white class here
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Profile"
-            value={profile}
-            onChange={(e) => setProfile(e.target.value)}
-            className="input-field bg-white" // Add bg-white class here
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <input
-            type="text"
-            placeholder="Technologies (comma separated)"
-            value={techs}
-            onChange={(e) => setTechs(e.target.value)}
-            className="input-field bg-white" // Add bg-white class here
-            required
-          />
-        </div>
-        <div className="mb-4">
-        <button
-          type="submit"
-          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-        >
-          Add Job Opportunity
-        </button>
-        </div>
-      </form>
+      </div>
+      <div className="container  ">
+        {/* <header className="header"> */}
+          <h1 className="post-job text-2xl text-red-600 backdrop-blur-xl border rounded-lg p-1">Fill the form </h1>
+        {/* </header> */}
+        <form className=" bg-transparent backdrop-blur-xl border rounded-md ">
+          <div className="form-group">
+            <label style={{ color: "black" }} htmlFor="name">
+              Company Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Enter Company Name"
+              onChange={(e) => setCompany(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label style={{ color: "black" }} htmlFor="name">
+              Enter Job Location
+            </label>
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Enter Job Location"
+              onChange={(e) => setLocation(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label style={{ color: "black" }} htmlFor="logo">
+              Company logo
+            </label>
+            <label>
+              <input
+                type="file"
+                id="myFile"
+                name="filename"
+                onChange={handleImg}
+                required
+              />
+            </label>
+          </div>
+          <div className="form-group">
+            <label style={{ color: "black" }}>What position are you posting for?</label>
+            <select
+              id="dropdown"
+              name="role"
+              className="form-control"
+              onChange={(e) => setPosition(e.target.value)}
+              required
+            >
+              <option disabled selected value>
+                Select position
+              </option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>Full Stack</option>
+              <option>Devops</option>
+              <option>Digital Marketing</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label style={{ color: "black" }} htmlFor="name">
+              Enter Job Role
+            </label>
+            <input
+              type="text"
+              name="name"
+              className="form-control"
+              placeholder="Enter Job Role"
+              onChange={(e) => setRole(e.target.value)}
+              required
+            />
+          </div>
+
+          <div className="form-group" onChange={(e) => setExperience(e.target.value)}>
+            <label style={{ color: "black" }}>Experience </label>
+            <label>
+              <input
+                name="user-recommend"
+                value="0-1 Year"
+                type="radio"
+                className="input-radio"
+              />
+              <span style={{ color: "black" }}>0-1 Year</span>
+            </label>
+            <label>
+              <input
+                name="user-recommend"
+                value=" 2-3 Years"
+                type="radio"
+                className="input-radio"
+              />
+              <span style={{ color: "black" }}>2-3 Years</span>
+            </label>
+            <label>
+              <input
+                name="user-recommend"
+                value=" 4-5 Years"
+                type="radio"
+                className="input-radio"
+              />
+              <span style={{ color: "black" }}>4-5 Years</span>
+            </label>
+            <label>
+              <input
+                name="user-recommend"
+                value="5+ Years"
+                type="radio"
+                className="input-radio"
+              />
+              <span style={{ color: "black" }}>5+ Years</span>
+            </label>
+          </div>
+
+          <div className="form-group">
+            <label style={{ color: "black" }}>Salary</label>
+            <select
+              className="form-control"
+              onChange={(e) => setSalary(e.target.value)}
+              required
+            >
+              <option disabled selected value>
+                Select Salary
+              </option>
+              <option value="0-15K">0-15K</option>
+              <option value="15-30K">15-30K</option>
+              <option value="30K-50K">30K-50K</option>
+              <option value="50K-80K">50K-80K</option>
+              <option value="80K+">80K+</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <button
+              type="submit"
+              className="submit-button"
+              onClick={handleSubmitButton}
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
 
-export default AddJob;
+export default PostJob;

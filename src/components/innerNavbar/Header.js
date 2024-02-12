@@ -45,7 +45,6 @@ const Header = () => {
                 <Tab label="Find Jobs" />
               </Tabs>
               
-             
               <Button sx={{ marginLeft: "10px" }} variant="contained">    
                 Post Job
               </Button>
