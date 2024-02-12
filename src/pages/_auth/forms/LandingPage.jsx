@@ -3,18 +3,18 @@ import Navbar from '../../../components/Navbar';
 import '../../../styles/landing.css';  // Ensure that Tailwind CSS styles are imported
 import { Link } from 'react-router-dom';
 import Footer from '../../../components/Footer';
+import { Box } from '@mui/material';
 
 const LandingPage = () => {
-  // useEffect(() => {
-  //   // Apply Tailwind CSS class to the body element
-  //   document.body.classList.add('overflow-hidden');
+  useEffect(() => {
+    // Apply Tailwind CSS class to the body element
+    document.body.classList.add('overflow-hidden');
 
-  //   // Clean up the class on component unmount
-  //   return () => {
-  //     document.body.classList.remove('overflow-hidden');
-  //   };
-  // }, []); // Empty dependency array ensures that the effect runs only once
-
+    // Clean up the class on component unmount
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []); // Empty dependency array ensures that the effect runs only once
 
   return (
     <>
@@ -48,6 +48,9 @@ const LandingPage = () => {
         <Link to="/EmployerHome">Post Jobs</Link>
       </div>
       </div>
+      <Box height={'100px'} alignSelf={'center'} width={'90%'} sx={{backdropFilter:'url(50px)', background:'transparent'}}>
+
+      </Box>
       </section>
 
       <Footer />

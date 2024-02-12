@@ -5,5 +5,3 @@ const PostJobs = () => {
     <div>PostJobs</div>
   )
 }
-
-export default PostJobs
