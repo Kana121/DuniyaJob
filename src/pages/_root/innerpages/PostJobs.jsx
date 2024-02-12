@@ -61,6 +61,7 @@ const PostJob = () => {
     }
   };
 
+const PostJobs = () => {
   return (
     <div className=" justify-center align-middle" >
       <Header />
@@ -216,7 +217,7 @@ const PostJob = () => {
         </form>
       </div>
     </div>
-  );
-};
+  )
+}}
 
-export default PostJob;
+export default PostJobs
