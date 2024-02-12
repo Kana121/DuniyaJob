@@ -19,7 +19,7 @@ export default function ContrySelector(props) {
         size="sm"
         autoHighlight
         isOptionEqualToValue={(option, value) => option.code === value.code}
-        defaultValue={{ code: 'TH', label: 'Thailand', phone: '66' }}
+        // defaultValue={{ code: 'TH', label: 'Thailand', phone: '66' }}
         options={countries}
         renderOption={(optionProps, option) => (
           <AutocompleteOption {...optionProps}>
