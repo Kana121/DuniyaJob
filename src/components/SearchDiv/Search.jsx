@@ -8,7 +8,7 @@ const Search = () => {
   return (
     <div className="search">
       <form action="">
-        <div className="firstDiv">
+        <div className="firstDiv mt-10 ">
           <div className="icons">
             <AiOutlineSearch className="icon"  />
             <input type='text' className="search-input" placeholder="Search Job here ..."/>
