@@ -22,6 +22,11 @@ import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
 import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
 import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
+import Notifications from "./pages/_root/footerpages/Notification";
+
+
+
+
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -74,6 +79,7 @@ function App() {
         <Route path="/PostJob" element={<PostJobs/>} />
         <Route path="/FAQ" element={<FAQPage />}/> 
         <Route path="/About-us" element={<AboutUs/>}/>
+        <Route path="/Notifications" element={<Notifications />} />
         
         
       </Route>
