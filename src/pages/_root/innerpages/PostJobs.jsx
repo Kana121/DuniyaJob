@@ -1,32 +1,86 @@
-import { Box } from '@mui/material'
-import React from 'react'
-import Header from '../../../components/innerNavbar/Header'
-import CssBaseline from '@mui/material/CssBaseline';
-import Container from '@mui/material/Container';
-import job from '../../../assets/post_job1.jpg'
+import React, { useState } from "react";
+//import "../../../../src/pages/_root/innerpages/PostJob.css"; // Import your CSS file
 
-const PostJobs = () => {
+const AddJob = () => {
+  const [desc, setDesc] = useState("");
+  const [exp, setExp] = useState("");
+  const [profile, setProfile] = useState("");
+  const [techs, setTechs] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newJob = {
+      desc: desc,
+      exp: parseInt(exp),
+      profile: profile,
+      techs: techs.split(",").map((tech) => tech.trim()),
+    };
+    console.log(newJob);
+
+    // Clear input fields after submission
+    setDesc("");
+    setExp("");
+    setProfile("");
+    setTechs("");
+  };
+
   return (
-    <>
-    <div>
-      <Header/>
+    <div className="mx-auto max-w-lg px-4 py-8">
+      <p className="text-3xl font-semibold text-center mb-8">
+        Post New Job Opportunities
+      </p>
+      <form onSubmit={handleSubmit}>
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Description"
+            value={desc}
+            onChange={(e) => setDesc(e.target.value)}
+            className="input-field"
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="number"
+            placeholder="Experience (years)"
+            value={exp}
+            onChange={(e) => setExp(e.target.value)}
+            className="input-field bg-white" // Add bg-white class here
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Profile"
+            value={profile}
+            onChange={(e) => setProfile(e.target.value)}
+            className="input-field bg-white" // Add bg-white class here
+            required
+          />
+        </div>
+        <div className="mb-4">
+          <input
+            type="text"
+            placeholder="Technologies (comma separated)"
+            value={techs}
+            onChange={(e) => setTechs(e.target.value)}
+            className="input-field bg-white" // Add bg-white class here
+            required
+          />
+        </div>
+        <div className="mb-4">
+        <button
+          type="submit"
+          className="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        >
+          Add Job Opportunity
+        </button>
+        </div>
+      </form>
     </div>
-    <div className=' flex mt-24 ml-10 mr-10'>
-    <React.Fragment>
-      {/*<CssBaseline />*/}
-      
-        <Box className=' container' sx={{ bgcolor: '#cfe8fc', height: '50vh',}} >
-          <Box alignSelf={' flex-end'} sx={{width:'50%', height: '50vh',}}>
-            <img src={job} className=' object-cover' height={'100vh'}/>
-          </Box>
-        </Box>
-        
-     
-    </React.Fragment>
-    </div>
-    </>
-    
-  )
-}
+  );
+};
 
-export default PostJobs
+export default AddJob;
