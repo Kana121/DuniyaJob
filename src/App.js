@@ -9,12 +9,12 @@ import EmployeeLogin from "./pages/_auth/forms/EmployeeLogin";
 import EmployerSignup from "./pages/_auth/forms/EmployerSignup";
 import EmployerLogin from "./pages/_auth/forms/EmployerLogin";
 import LandingPage from "./pages/_auth/forms/LandingPage";
-import Home from "./pages/_root/innerpages/Home";
+// import Home from "./pages/_root/innerpages/Home";
 import './index.css';
 import LoaderPage from "./pages/_auth/forms/LoaderPage";
 import JobSearch from "./pages/_root/innerpages/JobSearch";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
-import Footer from '../src/components/Footer';
+// import Footer from '../src/components/Footer';
 import OTPPage from "./pages/_auth/forms/OTPPage";
 import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
 import Employer_OTP from "./pages/_auth/forms/Employer_OTP";
@@ -22,6 +22,7 @@ import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
 import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
 import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
+import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -31,8 +32,7 @@ function App() {
   return (
     <main className="bg-pink-900 flex-1 bg-bgimage overflow-x-hidden no-scrollbar justify-center align-middle ">
       <div>
-        
-              
+          
     <Routes>
       {/* public routes */}
       <Route element={<AuthLayout />}>
@@ -74,22 +74,18 @@ function App() {
         <Route path="/PostJob" element={<PostJobs/>} />
         <Route path="/FAQ" element={<FAQPage />}/> 
         <Route path="/About-us" element={<AboutUs/>}/>
+        <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         
         
       </Route>
     </Routes>
-
-           
           
             {/* <Footer /> */}
 
-
-        
         </div>
   </main>
 
   
-
 // >>>>>>> 39dcba460153505831c5c3cb5a25c1ee308748e0
   );
 }
