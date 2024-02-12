@@ -8,7 +8,7 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages = ["Home", "Company reviews", "Salary guide", "Find Jobs"];
+const pages = [ "Find Candidates"];
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
 
