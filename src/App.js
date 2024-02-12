@@ -26,9 +26,6 @@ import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 import Notifications from "./pages/_root/footerpages/Notification";
 
 
-
-
-
 function App() {
   // const [color, setcolor] = useState("Blue")
   // const click = color => {
