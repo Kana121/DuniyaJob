@@ -75,7 +75,7 @@ const Employer_Home = () => {
             <img src={samsung} alt="logo6" height={'80vh'} width={'100vh'} className=' object-fill mt-6'/>
           </Box>
         </Box>
-        
+                        
         </div>
         
         </Container>
