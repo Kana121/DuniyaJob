@@ -3,7 +3,7 @@ import React from 'react'
 import Header from '../../../components/innerNavbar/Header'
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
-import job from '../../../assets/post_job.png'
+import job from '../../../assets/post_job1.jpg'
 
 const PostJobs = () => {
   return (
@@ -11,19 +11,17 @@ const PostJobs = () => {
     <div>
       <Header/>
     </div>
-    <div className=' flex mt-28'>
+    <div className=' flex mt-24 ml-10 mr-10'>
     <React.Fragment>
-      <CssBaseline />
-      <Container >
-        <Box sx={{ bgcolor: '#cfe8fc', height: '50vh', display: 'flex',}} >
-
-          <Box alignSelf={'flex-end'} sx={{width:'50%', height: '100%',}}>
-            <img src={job} className=' flex object-cover'/>
+      {/*<CssBaseline />*/}
+      
+        <Box className=' container' sx={{ bgcolor: '#cfe8fc', height: '50vh',}} >
+          <Box alignSelf={' flex-end'} sx={{width:'50%', height: '50vh',}}>
+            <img src={job} className=' object-cover' height={'100vh'}/>
           </Box>
-
         </Box>
         
-      </Container>
+     
     </React.Fragment>
     </div>
     </>
