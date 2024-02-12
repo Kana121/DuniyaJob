@@ -2,7 +2,7 @@
 import React from 'react'
 import imagefirst from "../../../assets/img1.jpg"
 import { Box } from '@mui/material'
-
+import Footer from "../../../components/Footer"
 const AboutUs = () => {
   return (
     <>
@@ -30,7 +30,9 @@ const AboutUs = () => {
     
     </div>
     </div>
+    <Footer/>
     </div>
+
     </>
   )
 }
