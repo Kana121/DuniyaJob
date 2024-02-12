@@ -5,6 +5,7 @@ import Anna from '../../../assets/avatar-anna-kim.webp';
 import Kimberly from '../../../assets/avatar-kimberly-smith.webp';
 import Nathan from '../../../assets/avatar-nathan-peterson.webp';
 import Rizky from '../../../assets/avatar-rizky-hasanuddin.webp';
+
 import Chess from '../../../assets/image-chess.webp';
 
 export default function Notifcations() {
