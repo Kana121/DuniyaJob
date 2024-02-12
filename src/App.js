@@ -23,6 +23,7 @@ import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
 import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 import Notifications from "./pages/_root/footerpages/Notification";
+import Employer_Home from "./pages/_root/innerpages/Employer_Home";
 
 
 
@@ -79,7 +80,8 @@ function App() {
         <Route path="/PostJob" element={<PostJobs/>} />
         <Route path="/FAQ" element={<FAQPage />}/> 
         <Route path="/About-us" element={<AboutUs/>}/>
-        <Route path="/Notifications" element={<Notifications />} />
+        <Route path="/Notifications" element={<Notifications />}/>
+        <Route path="/EmployerHome" element={<Employer_Home />} />
         
         
       </Route>
