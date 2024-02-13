@@ -65,8 +65,6 @@ const PostJobs = () => {
 
 
 
-  
-
   return (
     <div className=" justify-center align-middle" >
       <Header />

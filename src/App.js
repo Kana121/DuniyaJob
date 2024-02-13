@@ -26,6 +26,7 @@ import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 import Notifications from "./pages/_root/footerpages/Notification";
 import Employer_Home from "./pages/_root/innerpages/Employer_Home";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
+import ApplyForm from "./components/applyform/ApplyForm";
 
 
 
@@ -86,6 +87,7 @@ function App() {
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<Employer_Home />} />
+        <Route path="/apply-job" element={<ApplyForm />} />
         
         
       </Route>
