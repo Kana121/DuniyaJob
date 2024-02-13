@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import "./PostJobs.css"; // Assuming this file contains your custom styles
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import Header from "../../../components/innerNavbar/Header";
 
-const PostJob = () => {
+
+const PostJobs = () => {
+
   const [company, setCompany] = useState("");
   const [logo, setLogo] = useState("");
   const [position, setPosition] = useState("");
@@ -13,7 +15,7 @@ const PostJob = () => {
   const [role, setRole] = useState("");
   const [location, setLocation] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const getBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -61,7 +63,9 @@ const PostJob = () => {
     }
   };
 
-const PostJobs = () => {
+
+
+
   return (
     <div className=" justify-center align-middle" >
       <Header />
@@ -71,9 +75,9 @@ const PostJobs = () => {
         </div>
       </div>
       <div className="container  ">
-        {/* <header className="header"> */}
+        
           <h1 className="post-job text-2xl text-red-600 backdrop-blur-xl border rounded-lg p-1">Fill the form </h1>
-        {/* </header> */}
+        
         <form className=" bg-transparent backdrop-blur-xl border rounded-md ">
           <div className="form-group">
             <label style={{ color: "black" }} htmlFor="name">
@@ -218,6 +222,6 @@ const PostJobs = () => {
       </div>
     </div>
   )
-}}
+}
 
 export default PostJobs
