@@ -165,7 +165,7 @@ export default function Navbar() {
           >
             <MenuIcon />
           </IconButton> */}
-          <img className=" h-16" src={logo} alt="image" />
+          <img className=" h-16" src={logo} alt="img" />
           <Typography
             variant="h6"
             noWrap

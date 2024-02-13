@@ -5,7 +5,6 @@ import logo from "../../../assets/dj-white.png";
 import Button from "@mui/material/Button";
 // import {navigate} from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
-import bg from "../../../assets/Loader_bg.png"
 
 const LoaderPage = () => {
   const navigate = useNavigate();
@@ -19,7 +18,7 @@ const LoaderPage = () => {
       {/* <img src={bg} alt="image" className=" flex h-2/3 w-full"/>   */}
         <div className=" flex w-full text-right text-white font-mono">
           <div className="flex ">
-            <img src={logo} alt="image" />
+            <img src={logo} alt="img" />
           </div>
 
           <div className=" flex-col mr-64">

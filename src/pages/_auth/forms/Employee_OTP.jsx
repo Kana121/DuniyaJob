@@ -28,7 +28,7 @@ const OTPPage = () => {
             </Box>
             <Button
               component={Link}
-              to="/Employer-set-password"
+              to="/Employee-set-password"
               sx={{ width: 'max-content', alignSelf: 'center', border: 'solid' }}
             >
               Verify
