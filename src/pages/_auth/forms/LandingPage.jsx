@@ -1,29 +1,50 @@
-import React, { useEffect } from 'react';
-import Navbar from '../../../components/Navbar';
-import '../../../styles/landing.css';  // Ensure that Tailwind CSS styles are imported
-import { Link } from 'react-router-dom';
-import Footer from '../../../components/Footer';
-import { Box } from '@mui/material';
+import React, { useEffect } from "react";
+import Navbar from "../../../components/Navbar";
+import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported
+import { Link } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import { Box } from "@mui/material";
+// import Carousel from 'carousel';
+
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
 const LandingPage = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1, // optional, default to 1.
+    },
+  };
+
   useEffect(() => {
     // Apply Tailwind CSS class to the body element
-    document.body.classList.add('overflow-hidden');
+    document.body.classList.add("overflow-hidden");
 
     // Clean up the class on component unmount
     return () => {
-      document.body.classList.remove('overflow-hidden');
+      document.body.classList.remove("overflow-hidden");
     };
   }, []); // Empty dependency array ensures that the effect runs only once
 
   return (
     <>
-    <div className=' overflow-y-scroll '>
-      
-      <section className="w-screen h-screen flex flex-col">
-        <div className="sticky">
-          <Navbar />
-        </div>
+      <div className=" overflow-y-scroll ">
+        <section className="w-screen h-screen flex flex-col">
+          <div className="sticky">
+            <Navbar />
+          </div>
 
         <div className="flex-1 mt-4 flex items-center justify-center">
           <div className="banner-img">
@@ -53,10 +74,8 @@ const LandingPage = () => {
       </Box>
       </section>
 
-      <Footer />
-
-    </div>
-
+        <Footer />
+      </div>
     </>
   );
 };

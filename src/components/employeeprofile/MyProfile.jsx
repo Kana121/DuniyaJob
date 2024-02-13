@@ -204,7 +204,10 @@ export default function MyProfile() {
               <Stack direction="row" spacing={2}>
                 <FormControl>
                   <FormLabel>Role</FormLabel>
-                  <Input size="sm" defaultValue="UI Developer" />
+                  <Input size="sm" 
+                  placeholder="python developer, "
+                  // defaultValue="UI Developer"
+                   />
                 </FormControl>
                 <FormControl sx={{ flexGrow: 1 }}>
                   <FormLabel>Email</FormLabel>
@@ -213,7 +216,7 @@ export default function MyProfile() {
                     type="email"
                     startDecorator={<EmailRoundedIcon />}
                     placeholder="email"
-                    defaultValue="siriwatk@test.com"
+                    // defaultValue="siriwatk@test.com"
                     sx={{ flexGrow: 1 }}
                   />
                 </FormControl>
@@ -221,7 +224,7 @@ export default function MyProfile() {
               <div>
                 <CountrySelector />
               </div>
-              <div>
+              {/* <div>
                 <FormControl sx={{ display: { sm: "contents" } }}>
                   <FormLabel>Timezone</FormLabel>
                   <Select
@@ -243,7 +246,7 @@ export default function MyProfile() {
                     </Option>
                   </Select>
                 </FormControl>
-              </div>
+              </div> */}
             </Stack>
           </Stack>
           <Stack
@@ -310,7 +313,7 @@ export default function MyProfile() {
                 type="email"
                 startDecorator={<EmailRoundedIcon />}
                 placeholder="email"
-                defaultValue="siriwatk@test.com"
+                // defaultValue="siriwatk@test.com"
                 sx={{ flexGrow: 1 }}
               />
             </FormControl>
@@ -318,7 +321,7 @@ export default function MyProfile() {
               <CountrySelector />
             </div>
             <div>
-              <FormControl sx={{ display: { sm: "contents" } }}>
+              {/* <FormControl sx={{ display: { sm: "contents" } }}>
                 <FormLabel>Timezone</FormLabel>
                 <Select
                   size="sm"
@@ -338,7 +341,7 @@ export default function MyProfile() {
                     </Typography>
                   </Option>
                 </Select>
-              </FormControl>
+              </FormControl> */}
             </div>
           </Stack>
           <CardOverflow sx={{ borderTop: "1px solid", borderColor: "divider" }}>
