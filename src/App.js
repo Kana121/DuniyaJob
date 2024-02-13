@@ -13,7 +13,7 @@ import LandingPage from "./pages/_auth/forms/LandingPage";
 import './index.css';
 import LoaderPage from "./pages/_auth/forms/LoaderPage";
 import JobSearch from "./pages/_root/innerpages/JobSearch";
-import PostJobs from "./pages/_root/innerpages/PostJobs";
+//import PostJobs from "./pages/_root/innerpages/PostJobs";
 // import Footer from '../src/components/Footer';
 import OTPPage from "./pages/_auth/forms/OTPPage";
 import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
@@ -25,6 +25,8 @@ import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 import Notifications from "./pages/_root/footerpages/Notification";
 import Employer_Home from "./pages/_root/innerpages/Employer_Home";
+import PostJobs from "./pages/_root/innerpages/PostJobs";
+import ApplyForm from "./components/applyform/ApplyForm";
 
 
 
@@ -78,12 +80,14 @@ function App() {
         <Route path="/chats/:id/" element={<ChatSection />}/> */}
         {/* <Route path="/Home" element={<Home/>} /> */}
         <Route path="/JobSearch" element={<JobSearch/>} />
-        <Route path="/PostJob" element={<PostJobs/>} />
+        {/* <Route path="/PostJob" element={<PostJobs/>} /> */}
+        <Route path="/PostJob" element={<PostJobs/>}/>
         <Route path="/FAQ" element={<FAQPage />}/> 
         <Route path="/About-us" element={<AboutUs/>}/>
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<Employer_Home />} />
+        <Route path="/apply-job" element={<ApplyForm />} />
         
         
       </Route>
