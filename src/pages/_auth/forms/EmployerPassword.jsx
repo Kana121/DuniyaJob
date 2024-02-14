@@ -9,7 +9,7 @@ const EmployeePassword = () => {
         <Navbar />
       </div>
 
-      <section className="h-screen flex flex-col md:flex-row justify-center items-center bg-gray-900 rounded-lg">
+      <section className="h-screen flex flex-col md:flex-row justify-center items-center bg-transparent rounded-lg">
         <div className="md:w-1/3 mt-10 md:mt-0 text-white flex flex-col items-center">
           <img
             src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"

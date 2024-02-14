@@ -10,7 +10,7 @@ const OTPPage = () => {
     <>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <div className="flex flex-grow justify-center items-center bg-gray-900">
+        <div className="flex flex-grow justify-center items-center bg-transparent">
           <div className="flex flex-col p-10 text-white rounded-lg">
             <Box sx={{ p: '20px', alignSelf: 'center' }}>
               <Typography sx={{ p: '15px' }}>

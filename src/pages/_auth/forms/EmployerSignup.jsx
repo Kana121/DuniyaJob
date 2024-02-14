@@ -8,7 +8,7 @@ const EmployerSignup = () => {
     <>
       <div className="min-h-screen flex flex-col">
         <Navbar />
-        <section className="flex flex-col md:flex-row justify-center items-center flex-grow bg-gray-900">
+        <section className="flex flex-col md:flex-row justify-center items-center flex-grow bg-transparent">
           <div className="md:w-1/2 flex mt-3 justify-center">
             <img
               src="https://tecdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
