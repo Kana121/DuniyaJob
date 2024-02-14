@@ -14,7 +14,7 @@ const sections = [
       { name: "FAQ", link: "/faq" },
       { name: "About Us", link: "/about-us" },
       { name: "Careers", link: "/careers" },
-      { name: "Employee Home", link: "/employee-home" }
+      
     ]
   },
   {
@@ -22,7 +22,8 @@ const sections = [
     items: [
       { name: "Help Center", link: "/help-center" },
       { name: "Notices", link: "/notices" },
-      { name: "Notifications", link: "/notifications" }
+      { name: "Notifications", link: "/notifications" },
+      { name: "Contact-Us", link: "/contact-us" },
     ]
   },
   {

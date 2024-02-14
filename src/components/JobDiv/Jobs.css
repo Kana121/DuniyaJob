@@ -10,13 +10,13 @@
 .groupDiv{
 	width: 250px;
 	padding: 20px;
-	background-color: white;
+	background-color: rgb(109, 93, 93);
 	border-radius:10px ;
 	border: none;
 	box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
 	box-shadow: #f1f4f8;
 }
-.groupDiv:hover {
+/* .groupDiv:hover {
 	background-color: rgb(19, 159, 241);
 	
 }
@@ -34,9 +34,11 @@
 }
 .groupDiv:hover hr{
 	color: white	
-}
+} */
 .groupDiv:hover button{
-	color: black
+	/* color: black; */
+	background-color: black;
+
 }
 .groupDiv:hover hr{
 	color: white;

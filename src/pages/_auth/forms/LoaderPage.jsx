@@ -29,7 +29,7 @@ const LoaderPage = () => {
               Your Future, Your Choice.
             </div>
             <div className=" mt-28">
-              <Button variant="contained" onClick={navigateToHome} >
+              <Button variant="contained" onClick={navigateToHome} className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
                 Get Started ⇒
               </Button>
               

@@ -153,8 +153,8 @@ export default function Navbar() {
   );
 
   return (
-    <Box sx={{ width:"auto",position:"sticky"}} >
-      <AppBar position="fixed">
+    <Box sx={{ width:"auto",position:"sticky",}} >
+      <AppBar position="fixed" sx={{background:'transparent' , backdropFilter:'blur(15px)'}}>
         <Toolbar>
           {/* <IconButton
             size="large"
@@ -170,7 +170,7 @@ export default function Navbar() {
             variant="h6"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/Home"
             sx={{
               mr: 2,
               display: { xs: 'none', sm: 'none', md: 'flex' },
