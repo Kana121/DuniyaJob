@@ -29,9 +29,8 @@ import EmployerHome from "./pages/_root/innerpages/EmployerHome";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
 import ApplyForm from "./components/applyform/ApplyForm";
 import data from "./jsondata/csvjson.json";
-
-
-
+import TermsCondtions from "./pages/_root/footerpages/TermsConditions";
+import PRIVACYPOLICY from "./pages/_root/footerpages/PrivacyPolicy";
 
 import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
 import Jobs from "./pages/_root/innerpages/Jobs";
@@ -88,7 +87,9 @@ function App() {
         {/* <Route path="/PostJob" element={<PostJobs/>} /> */}
         <Route path="/PostJob" element={<PostJobs/>}/>
         <Route path="/FAQ" element={<FAQPage />}/> 
+        <Route path="/terms-&-conditions" element={<TermsCondtions />}/>
         <Route path="/About-us" element={<AboutUs/>}/>
+        <Route path="/Privacy-policy" element={<PRIVACYPOLICY />}/>
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<EmployerHome />} />

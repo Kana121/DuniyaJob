@@ -5,11 +5,10 @@ import logo1 from "../../assets/logo1.png";
 import logo2 from "../../assets/logo2.png";
 import logo3 from "../../assets/logo3.png";
 import logo4 from "../../assets/logo4.png";
-import { Button } from "@mui/material";
+import { Button, Stack } from "@mui/material";
 
 const card = [
   {
-    
     id: 1,
     image: logo1,
     title: "Web Developer",
@@ -86,29 +85,43 @@ const card = [
 const Jobs = () => {
   return (
     <div>
-      <div className="job">
-        {card.map(({ id, image, title, location, desc, company, time }) => {
-          return (
-            <div className="groupDiv" id="groupDiv" key={id}>
-              <span className="groupSpan">
-                <h1 className="textH1">{title}</h1>
-                <span className="SpanDiv">
-                  <BiTimeFive />
-                  {time}
+      <Stack direction={"row"}>
+        <div>
+
+        </div>
+        <div className="job bg-gray-900">
+          {card.map(({ id, image, title, location, desc, company, time }) => {
+            return (
+              <div className="groupDiv" id="groupDiv" key={id}>
+                <span className="groupSpan">
+                  <h1 className="textH1">{title}</h1>
+                  <span className="SpanDiv">
+                    <BiTimeFive />
+                    {time}
+                  </span>
                 </span>
-              </span>
-              <h6 className="textH6">{location}</h6>
-              <hr className="line" />
-              <p className="textP">{desc}</p>
-              <div className="company">
-                <img src={image} alt="" className="logo" />
-                <span className="SpanDiv1">{company}</span>
+                <h6 className="textH6">{location}</h6>
+                <hr className="line" />
+                <p className="textP">{desc}</p>
+                <div className="company">
+                  <img src={image} alt="" className="logo" />
+                  <span className="SpanDiv1">{company}</span>
+                </div>
+                <Button
+                  href="/apply-job"
+                  sx={{
+                    border: "solid 1px",
+                    borderColor: "white",
+                    color: "white",
+                  }}
+                >
+                  Apply Now
+                </Button>
               </div>
-              <Button href="/apply-job" sx={{border:'solid 1px',borderColor:'white',color:'white'}}>Apply Now</Button>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      </Stack>
     </div>
   );
 };
