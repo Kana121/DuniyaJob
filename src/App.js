@@ -24,7 +24,7 @@ import AboutUs from "./pages/_root/footerpages/AboutUs";
 import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 import Notifications from "./pages/_root/footerpages/Notification";
-import Employer_Home from "./pages/_root/innerpages/Employer_Home";
+import EmployerHome from "./pages/_root/innerpages/EmployerHome";
 
 
 
@@ -83,7 +83,7 @@ function App() {
         <Route path="/About-us" element={<AboutUs/>}/>
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         <Route path="/Notifications" element={<Notifications />}/>
-        <Route path="/EmployerHome" element={<Employer_Home />} />
+        <Route path="/EmployerHome" element={<EmployerHome />} />
         
         
       </Route>
