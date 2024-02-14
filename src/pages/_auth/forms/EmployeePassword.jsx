@@ -33,7 +33,7 @@ const EmployeePassword = () => {
           <span className='text-black'>Remember Me</span>
         </label>
         <div className="text-center md:text-left">
-          <Link to="/Jobs">
+          <Link to="/JobSearch">
             <button className="mt-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Register</button>
           </Link>
         </div>

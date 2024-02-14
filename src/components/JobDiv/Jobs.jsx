@@ -5,6 +5,7 @@ import logo1 from "../../assets/logo1.png";
 import logo2 from "../../assets/logo2.png";
 import logo3 from "../../assets/logo3.png";
 import logo4 from "../../assets/logo4.png";
+import { Button } from "@mui/material";
 
 const card = [
   {
@@ -103,7 +104,7 @@ const Jobs = () => {
                 <img src={image} alt="" className="logo" />
                 <span className="SpanDiv1">{company}</span>
               </div>
-              <button className="btn1">Apply Now</button>
+              <Button href="/apply-job" sx={{border:'solid 1px',borderColor:'white',color:'white'}}>Apply Now</Button>
             </div>
           );
         })}

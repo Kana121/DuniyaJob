@@ -43,8 +43,7 @@ const Header = () => {
                 <Tab label="Find Candidates" />
               </Tabs>
               
-             
-              <Button sx={{ marginLeft: "10px" }} variant="contained" href="/PostJob">    
+              <Button href="/PostJob"  sx={{ marginLeft: "10px" }} variant="contained">    
                 Post Job
               </Button>
             </>
