@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar from '../../../components/Navbar'
 import { Link } from 'react-router-dom'
 
-const OTPPage = () => {
+const Employer_OTP = () => {
   return (
 
     <>
@@ -40,4 +40,4 @@ const OTPPage = () => {
   )
 }
 
-export default OTPPage
+export default Employer_OTP;
