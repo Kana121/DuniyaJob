@@ -5,7 +5,7 @@ import Navbar from '../../../components/Navbar';
 import { Box, Button, Input, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-const Employer_OTP = () => {
+const OTPPage = () => {
   return (
     <>
       <div className="min-h-screen flex flex-col">
