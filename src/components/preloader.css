@@ -14,28 +14,46 @@
     overflow: hidden;
     font-style: italic;
     background-image: url("/src/assets/Loader_bg.png");
-
-    /* background-repeat: no-repeat; */
-
     background-size: cover;
     background-position: center;
-   
-
-
 }
 
+/* Make background image responsive */
+@media (max-width: 768px) {
+    .preloader {
+        background-size: contain;
+    }
+}
 
 .preloader .texts-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* height: px; */
-    width: 650px;
-    font-size: 35px;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 650px; /* Limit width for larger screens */
+    font-size: 24px; /* Adjust font size for smaller screens */
     font-weight: 800;
     overflow: hidden;
     color: #A4EAFF;
     font-style: italic;
 }
 
-/* @media (min-width: 640px) { ... } */
+/* Media query for to smaller screens */
+@media (min-width: 320px) {
+    .preloader .texts-container {
+        font-size: 21px; /* Increase font size for medium screens */
+    }
+}
+/* Media query for smaller screens */
+@media (min-width: 640px) {
+    .preloader .texts-container {
+        font-size: 28px; /* Increase font size for medium screens */
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .preloader .texts-container {
+        font-size: 35px; /* Increase font size for larger screens */
+    }
+}

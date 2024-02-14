@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-pascal-case */
 // <<<<<<< HEAD
 // import Check from "./components/check";
 
@@ -12,10 +13,10 @@ import LandingPage from "./pages/_auth/forms/LandingPage";
 // import Home from "./pages/_root/innerpages/Home";
 import './index.css';
 import LoaderPage from "./pages/_auth/forms/LoaderPage";
-import JobSearch from "./pages/_root/innerpages/JobSearch";
+// import JobSearch from "./pages/_root/innerpages/JobSearch";
 //import PostJobs from "./pages/_root/innerpages/PostJobs";
 // import Footer from '../src/components/Footer';
-import OTPPage from "./pages/_auth/forms/OTPPage";
+import OTPPage from "./pages/_auth/forms/Employee_OTP";
 import EmployeePassword from "./pages/_auth/forms/EmployeePassword";
 import Employer_OTP from "./pages/_auth/forms/Employer_OTP";
 import EmployerPassword from "./pages/_auth/forms/EmployerPassword";
@@ -27,9 +28,13 @@ import Notifications from "./pages/_root/footerpages/Notification";
 import EmployerHome from "./pages/_root/innerpages/EmployerHome";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
 import ApplyForm from "./components/applyform/ApplyForm";
+import data from "./jsondata/csvjson.json";
 import TermsCondtions from "./pages/_root/footerpages/TermsConditions";
 import PRIVACYPOLICY from "./pages/_root/footerpages/PrivacyPolicy";
 
+import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
+import Jobs from "./pages/_root/innerpages/Jobs";
+import JobDetails from "./components/JobDetails";
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -38,7 +43,7 @@ function App() {
   // }
   
   return (
-    <main className=" flex-1 overflow-x-hidden  justify-center align-middle ">
+    <main className="flex-1 bg-gradient-to-r from-pink-300 via-teal-300 to-blue-300 overflow-x-hidden no-scrollbar justify-center align-middle" style={{ backgroundSize: '100% 100%' }}>
       <div>
           
     <Routes>
@@ -78,7 +83,7 @@ function App() {
         <Route path="/chat/:id/" element={<Chat />} />
         <Route path="/chats/:id/" element={<ChatSection />}/> */}
         {/* <Route path="/Home" element={<Home/>} /> */}
-        <Route path="/JobSearch" element={<JobSearch/>} />
+        <Route path="/JobSearch" element={<Jobs/>} />
         {/* <Route path="/PostJob" element={<PostJobs/>} /> */}
         <Route path="/PostJob" element={<PostJobs/>}/>
         <Route path="/FAQ" element={<FAQPage />}/> 
@@ -89,6 +94,8 @@ function App() {
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<EmployerHome />} />
         <Route path="/apply-job" element={<ApplyForm />} />
+        <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
+        <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
         
         
       </Route>

@@ -13,7 +13,7 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'bgimage': "url('/src/assets/backbg.jpg')",
+        'bgimage': "url('/src/assets/bgimg6.jpg')",
 
         // 'footer-texture': "url('/img/footer-texture.png')",
       }
