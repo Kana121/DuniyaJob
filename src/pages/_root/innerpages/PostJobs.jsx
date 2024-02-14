@@ -67,7 +67,7 @@ const PostJobs = () => {
 
   return (
     <div className=" justify-center align-middle" >
-      <Header />
+      {/* <Header /> */}
       <div className="job-background mt-20 ">
         <div className="title text-center font-bold mt-10 ">
           <h2 className="border rounded-lg backdrop-blur-lg p-2">Post a Job</h2>

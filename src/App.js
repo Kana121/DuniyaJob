@@ -27,9 +27,8 @@ import Notifications from "./pages/_root/footerpages/Notification";
 import EmployerHome from "./pages/_root/innerpages/EmployerHome";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
 import ApplyForm from "./components/applyform/ApplyForm";
-
-
-
+import TermsCondtions from "./pages/_root/footerpages/TermsConditions";
+import PRIVACYPOLICY from "./pages/_root/footerpages/PrivacyPolicy";
 
 
 function App() {
@@ -39,7 +38,7 @@ function App() {
   // }
   
   return (
-    <main className="bg-pink-900 flex-1 bg-bgimage overflow-x-hidden no-scrollbar justify-center align-middle ">
+    <main className=" flex-1 overflow-x-hidden  justify-center align-middle ">
       <div>
           
     <Routes>
@@ -83,7 +82,9 @@ function App() {
         {/* <Route path="/PostJob" element={<PostJobs/>} /> */}
         <Route path="/PostJob" element={<PostJobs/>}/>
         <Route path="/FAQ" element={<FAQPage />}/> 
+        <Route path="/terms-&-conditions" element={<TermsCondtions />}/>
         <Route path="/About-us" element={<AboutUs/>}/>
+        <Route path="/Privacy-policy" element={<PRIVACYPOLICY />}/>
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<EmployerHome />} />

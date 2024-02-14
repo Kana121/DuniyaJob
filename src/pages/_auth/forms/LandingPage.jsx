@@ -28,19 +28,19 @@ const LandingPage = () => {
     },
   };
 
-  useEffect(() => {
-    // Apply Tailwind CSS class to the body element
-    document.body.classList.add("overflow-hidden");
+  // useEffect(() => {
+  //   // Apply Tailwind CSS class to the body element
+  //   document.body.classList.add("overflow-hidden");
 
-    // Clean up the class on component unmount
-    return () => {
-      document.body.classList.remove("overflow-hidden");
-    };
-  }, []); // Empty dependency array ensures that the effect runs only once
+  //   // Clean up the class on component unmount
+  //   return () => {
+  //     document.body.classList.remove("overflow-hidden");
+  //   };
+  // }, []); // Empty dependency array ensures that the effect runs only once
 
   return (
     <>
-      <div className=" overflow-y-scroll ">
+      <div className=" bg-black">
         <section className="w-screen h-screen flex flex-col">
           <div className="sticky">
             <Navbar />

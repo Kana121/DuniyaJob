@@ -15,7 +15,7 @@ const LoaderPage = () => {
   
   return (
     <>
-      <div className=" w-full h-[100vh] mr-0">
+      <div className=" w-full h-[100vh] mr-0 bg-black">
       {/* <img src={bg} alt="image" className=" flex h-2/3 w-full"/>   */}
         <div className=" flex w-full text-right text-white font-mono">
           <div className="flex ">
