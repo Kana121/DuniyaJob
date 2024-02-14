@@ -14,7 +14,7 @@ const AuthLayout = () => {
       ) : (
         <>
         
-          <section className="flex  justify-center items-center flex-col  w-full ">
+          <section className="flex  justify-center items-center flex-col  ">
             <Outlet />
           </section>
 

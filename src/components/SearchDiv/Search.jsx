@@ -6,9 +6,9 @@ import { CiLocationOn } from "react-icons/ci";
 
 const Search = () => {
   return (
-    <div className="search backdrop-blur-2xl">
-      <form action="">
-        <div className="firstDiv mt-10 backdrop-blur-2xl">
+    <div className="search backdrop-blur-2xl bg-gray-400">
+      <form action="" className="bg-gray-500">
+        <div className="firstDiv mt-10 backdrop-blur-2xl bg-gray-200">
           <div className="icons">
             <AiOutlineSearch className="icon"  />
             <input type='text' className="search-input" placeholder="Search Job here ..."/>

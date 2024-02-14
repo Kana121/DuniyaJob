@@ -1,11 +1,10 @@
+
+
 import React from "react";
 import PreLoader from "../../../components/PreLoader";
 import logo from "../../../assets/dj-white.png";
-// import PreLoader from '../components/PreLoader'
 import Button from "@mui/material/Button";
-// import {navigate} from 'react-router-dom'
 import { useNavigate } from "react-router-dom";
-// import bg from "../../../assets/Loader_bg.png"
 
 const LoaderPage = () => {
   const navigate = useNavigate();
@@ -14,33 +13,25 @@ const LoaderPage = () => {
   };
   
   return (
-    <>
-      <div className=" w-full h-[100vh] mr-0">
-      {/* <img src={bg} alt="image" className=" flex h-2/3 w-full"/>   */}
-        <div className=" flex w-full text-right text-white font-mono">
-          <div className="flex ">
-            <img src={logo} alt="image1" />
-          </div>
+    <div className="w-full h-screen flex flex-col justify-center items-center text-white font-mono">
+      <img src={logo} alt="img" className="w-64" />
 
-          <div className=" flex-col mr-64">
-            <div className="flex text-2xl w-full mt-40">
-              Elevate your career with the right job.
-            </div>
-            <div className="flex text-5xl ">
-              Your Future, Your Choice.
-            </div>
-            <div className=" mt-28">
-              <Button variant="contained" onClick={navigateToHome} className="transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300">
-                Get Started ⇒
-              </Button>
-              
-            </div>
-          </div>
+      <div className="flex flex-col items-center text-center mx-4 md:mx-auto md:max-w-2xl">
+        <div className="text-xl md:text-2xl lg:text-3xl">
+          Elevate your career with the right job.
         </div>
-
-        <PreLoader />
+        <div className="text-4xl md:text-5xl lg:text-6xl mt-4">
+          Your Future, Your Choice.
+        </div>
+        <div className="mt-12">
+          <Button variant="contained" onClick={navigateToHome}>
+            Get Started ⇒
+          </Button>
+        </div>
       </div>
-    </>
+
+      <PreLoader />
+    </div>
   );
 };
 

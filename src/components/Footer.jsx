@@ -29,8 +29,8 @@ const sections = [
   {
     title: "Legal",
     items: [
-      { name: "Privacy Policy", link: "/privacy-policy" },
-      { name: "Terms and Conditions", link: "/terms-and-conditions" },
+      { name: "Privacy Policy", link: "/Privacy-policy" },
+      { name: "Terms and Conditions", link: "/terms-&-conditions" },
       { name: "Fraud Alerts", link: "/fraud-alerts" },
       { name: "Report an Issue", link: "/report-an-issue" }
     ]
