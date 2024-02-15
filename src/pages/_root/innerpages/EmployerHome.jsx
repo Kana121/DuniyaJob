@@ -43,7 +43,7 @@ const EmployerHome = () => {
                 alignSelf={" flex-end"}
                 sx={{ width: "40%", height: "50vh" }}
               >
-                <img src={job} className=" object-fill" height={"100%"} />
+                <img src={job} alt='' className=" object-fill" height={"100%"} />
               </Box>
               <Box>
                 <h1 className=" text-black text-4xl font-semibold mt-8">
@@ -195,3 +195,4 @@ const EmployerHome = () => {
 };
 
 export default EmployerHome;
+
