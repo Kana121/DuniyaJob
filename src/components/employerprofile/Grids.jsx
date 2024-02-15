@@ -32,7 +32,8 @@ export default function SpacingGrid() {
                   width: 350,
                   borderRadius: '7vh',
                   opacity: '80%',
-                  ":hover":{boxShadow: '15px', opacity: '100%'},
+
+                  ":hover":{boxShadow: 15, opacity: '100%'},
                   backgroundColor: (theme) =>
                     theme.palette.mode === 'dark' ? '#1A2027' : 'lightblue',
                   
