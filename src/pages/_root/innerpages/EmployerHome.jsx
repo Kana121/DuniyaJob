@@ -17,7 +17,7 @@ import persistant from "../../../assets/persistant_n.png";
 import samsung from "../../../assets/samsung_n.png";
 import tata from "../../../assets/tata.png";
 import unilever from "../../../assets/unilever.png";
-import Typography from '@mui/material/Typography';
+import Typography from "@mui/material/Typography";
 import Grids from "../../../components/employerprofile/Grids";
 
 const EmployerHome = () => {
@@ -176,14 +176,14 @@ const EmployerHome = () => {
                   }}
                 >*/}
                 <Container>
-                  <h1 className=" text-white mt-40 text-center text-3xl m-10 font-extrabold "> Why Choose Duniya Job Posting?</h1>
+                  <h1 className=" text-white mt-40 text-center text-3xl m-10 font-extrabold ">
+                    {" "}
+                    Why Choose Duniya Job Posting?
+                  </h1>
                 </Container>
                 <Box>
-                  
-                    
-                  <Grids/>
+                  <Grids />
                 </Box>
-                 
               </div>
             </Container>
           </Container>
