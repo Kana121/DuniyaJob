@@ -3,7 +3,7 @@ import { Container, Typography } from "@mui/material";
 
 function PRIVACYPOLICY() {
   return (
-    <Container className="App bg-black" maxWidth="md">
+    <Container className="App" maxWidth="md">
       <Typography
         variant="h1"
         component="h1"

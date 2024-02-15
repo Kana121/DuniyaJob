@@ -6,7 +6,7 @@ function TermsCondtions() {
 
 
   return (
-    <Container className="App bg-black" maxWidth="md">
+    <Container className="App " maxWidth="md">
       <Typography variant="h1" component="h1" gutterBottom sx={{ fontSize: 40, fontWeight:'bold', backgroundColor:'blue',   color: 'white', marginTop: 10, textAlign:'center'}}>
         Terms and Conditions
       </Typography>
