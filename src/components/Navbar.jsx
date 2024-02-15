@@ -200,7 +200,7 @@ export default function Navbar() {
           >
             About-Us
           </Typography>
-          <Typography
+         {/*} <Typography
             variant="h6"
             noWrap
             component="a"
@@ -216,7 +216,7 @@ export default function Navbar() {
             }}
           >
             Jobs-Category
-          </Typography>
+          </Typography>*/}
           {/* <Search>
             <SearchIconWrapper>
               <SearchIcon />

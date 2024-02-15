@@ -377,9 +377,7 @@
 //   );
 // };
 
-// export default EmployerHome;
-
-
+//  export default EmployerHome;
 import React from "react";
 import Header from "../../../components/innerNavbar/Header";
 import Button from "@mui/material/Button";
