@@ -3,6 +3,8 @@ import Navbar from '../../../components/Navbar';
 import '../../../styles/landing.css';  // Ensure that Tailwind CSS styles are imported
 import { Link } from 'react-router-dom';
 import Footer from '../../../components/Footer';
+import MoveCandidate from '../../../components/MoveCandidate';
+import candidatesData from '../../../jsondata/candidate.json';
 
 const LandingPage = () => {
   // useEffect(() => {
@@ -48,7 +50,14 @@ const LandingPage = () => {
         <Link to="/EmployerHome">Post Jobs</Link>
       </div>
       </div>
+      
       </section>
+      <div className="moving flex items-center gap-14 animate-marquee absolute ">
+
+        {candidatesData.map(candidate => (
+        <MoveCandidate key={candidate.id} candidate={candidate} />
+      ))} 
+        </div>
 
       <Footer />
 
