@@ -22,7 +22,10 @@ const Header = () => {
     <React.Fragment>
       <AppBar className="bg-gradient-to-r from-blue-300 via-sky-500 to-blue-900">
         <Toolbar>
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)" }} />
+          <Button href="/Home">
+          <AddBusinessRoundedIcon sx={{ transform: "scale(2)",color:'white' }} />
+          </Button> 
+            
           {isMatch ? (
             <>
               <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
