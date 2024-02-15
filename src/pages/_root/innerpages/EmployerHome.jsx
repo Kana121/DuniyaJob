@@ -377,7 +377,7 @@
 //   );
 // };
 
-// export default EmployerHome;
+//  export default EmployerHome;
 
 
 import React from "react";
