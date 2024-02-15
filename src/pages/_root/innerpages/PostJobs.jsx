@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./PostJobs.css"; // Assuming this file contains your custom styles
 // import { useNavigate } from "react-router-dom";
-import Header from "../../../components/innerNavbar/Header";
+// import Header from "../../../components/innerNavbar/Header";
 
 
 const PostJobs = () => {
@@ -59,24 +59,24 @@ const PostJobs = () => {
       }
       localStorage.setItem("item", JSON.stringify([...savedItem, { jobPost }]));
       window.alert("Form Submitted Successfully");
-     // navigate("/Jobs");
+      // navigate("/Jobs");
     }
   };
 
 
 
   return (
-    <div className=" justify-center align-middle" >
+    <div className=" justify-center align-center" >
       {/* <Header /> */}
       <div className="job-background mt-20 ">
         <div className="title text-center font-bold mt-10 ">
-          <h2 className="border rounded-lg backdrop-blur-lg p-2">Post a Job</h2>
+          <h2 className="">Post a Job</h2>
         </div>
       </div>
       <div className="container  ">
-        
-          <h1 className="post-job text-2xl text-red-600 backdrop-blur-xl border rounded-lg p-1">Fill the form </h1>
-        
+
+        <h1 className="post-job text-2xl text-red-600 backdrop-blur-xl border rounded-lg p-1">Fill the form </h1>
+
         <form className=" bg-transparent backdrop-blur-xl border rounded-md ">
           <div className="form-group">
             <label style={{ color: "black" }} htmlFor="name">
