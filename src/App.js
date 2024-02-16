@@ -40,6 +40,9 @@ import JobDetails from "./components/JobDetails";
 // import RtlLayout from "../src/views/rtl";
 // import RtlLayout from "../src/views/rtl/index.jsx";
 
+import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
+import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
+
 function App() {
   // const [color, setcolor] = useState("Blue")
   // const click = color => {
@@ -102,6 +105,9 @@ function App() {
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
 
 
+        <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
+        <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
+
        
         
       </Route>
@@ -118,3 +124,4 @@ function App() {
 }
 
 export default App;
+ 

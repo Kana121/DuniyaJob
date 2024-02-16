@@ -42,11 +42,11 @@ const Header = () => {
                 value={value}
                 onChange={(e, value) => setValue(value)}
               >
-                
-                <Tab label="Find Candidates" />
+                <Tab label='Home' href="/Home"/>
+                <Tab label="Find Candidates" href="/FindCandidate"/>
               </Tabs>
               
-              <Button href="/PostJob"  sx={{ marginLeft: "10px" }} variant="contained">    
+              <Button href="/DashboardPostJob"  sx={{ marginLeft: "10px" }} variant="contained">    
                 Post Job
               </Button>
             </>
