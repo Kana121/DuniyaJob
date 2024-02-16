@@ -1,8 +1,13 @@
 import React from 'react'
+import Drawer from '../../../components/dashboard/Drawer'
+
 
 const DashboardPostJob = () => {
   return (
-    <div>DashboardPostJob</div>
+    <><div>
+      <Drawer/>
+    </div>
+    </>
   )
 }
 

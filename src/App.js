@@ -24,7 +24,7 @@ import FAQPage from "./pages/_root/footerpages/FAQPage";
 import AboutUs from "./pages/_root/footerpages/AboutUs";
 import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
-import Notifications from "./pages/_root/footerpages/Notification";
+import Notifications from "./pages/_root/footerpages/Notifications";
 import EmployerHome from "./pages/_root/innerpages/EmployerHome";
 import PostJobs from "./pages/_root/innerpages/PostJobs";
 import ApplyForm from "./components/applyform/ApplyForm";
@@ -35,6 +35,7 @@ import PRIVACYPOLICY from "./pages/_root/footerpages/PrivacyPolicy";
 import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
 import Jobs from "./pages/_root/innerpages/Jobs";
 import JobDetails from "./components/JobDetails";
+import DashboardPostJob from "./pages/_root/innerpages/DashboardPostJob";
 
 
 function App() {
@@ -97,6 +98,7 @@ function App() {
         <Route path="/apply-job" element={<ApplyForm />} />
         <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
+        <Route path="/Dashboard-employer" element={<DashboardPostJob/>}/>
         
         
       </Route>
