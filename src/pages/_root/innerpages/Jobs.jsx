@@ -41,7 +41,7 @@ function Jobs() {
       <NavbarEmp/>
     </div>
       <div className="Jobs flex flex-col items-center text-gray-700">
-        {/* search */}
+        {/* search */} 
         <div className="jobs-search mt-7 flex justify-start">
           <div className="search flex justify-start">
             <div className="hero-search my-20">
