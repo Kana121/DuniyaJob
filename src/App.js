@@ -36,6 +36,8 @@ import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
 import Jobs from "./pages/_root/innerpages/Jobs";
 import JobDetails from "./components/JobDetails";
 import CompanyHome from "./components/foremployers/home/CompanyHome";
+import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
+import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -98,6 +100,9 @@ function App() {
         <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
         <Route path="/Dashboard" element={<CompanyHome/>}/>
+        <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
+        <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
+
         
         
       </Route>
