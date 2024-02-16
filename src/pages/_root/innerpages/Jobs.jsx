@@ -5,10 +5,24 @@ import { BiSearch } from "react-icons/bi";
 import { MdOutlineLocationOn } from "react-icons/md";
 import { RxDividerVertical } from "react-icons/rx";
 import Loader from "../../../components/Loader";
+import { Link } from "react-router-dom";
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
+import NavbarEmp from '../../../components/employeeprofile/NavbarEmp'
+
+
 
 function Jobs() {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchLocation, setLocation] = useState("");
+  const [category, setAge] = React.useState('');
+
+  const handleChange = (event) => {
+    setAge(event.target.value);
+  };
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8; // Number of items per page
 
@@ -44,37 +58,64 @@ function Jobs() {
     if (indexOfLastItem < filteredData.length) {
       setCurrentPage(currentPage + 1);
     }
+
+
   };
 
   return (
     <>
+    <div>
+      <NavbarEmp/>
+    </div>
       <div className="Jobs flex flex-col items-center text-gray-700">
-        {/* search */}
-        <div className="jobs-search flex justify-start">
+        {/* search */} 
+        <div className="jobs-search mt-7 flex justify-start">
           <div className="search flex justify-start">
             <div className="hero-search my-20">
               <div className="search-input px-10 py-5 drop-shadow-xl bg-white flex flex-col  md:flex-row justify-around items-center rounded-2xl border gap-3 relative md:w-[1040px]">
                 <input
                   type="text"
-                  className="border-0 outline-none pl-4  md:w-[400px]"
+                  className="border-0 outline-none pl-0 md:w-[200px]"
                   placeholder="Search jobs by 'skills'"
                   onChange={(e) => {
                     setSearchTerm(e.target.value);
                   }}
                 />{" "}
                 <BiSearch className="text-3xl absolute left-12 top-5 md:top-7 md:left-8 text-gray-500" />
-                <RxDividerVertical className="text-gray-100 text-4xl absolute left-[455px] hidden md:block font-light" />
+                <RxDividerVertical className="text-gray-200 text-4xl absolute left-[280px] hidden md:block font-light" />
                 <input
                   type="text"
-                  className="border-0 outline-none pl-3 my-3 md:my-0 md:w-[140px]"
+                  className="border-0 outline-none my-3 2xl:ml-0 md:my-0 md:w-[150px]"
                   placeholder="All cities 'India' "
                   onChange={(e) => {
                     setLocation(e.target.value);
                   }}
                 />
-                <MdOutlineLocationOn className="text-3xl absolute left-12 top-16 md:top-7 md:left-[500px] text-gray-500 " />
+
+<Box sx={{ minWidth: 150 }}>
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Category</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          value={category}
+          label="Category"
+          onChange={handleChange}
+        >
+          <MenuItem value={10}>Sales</MenuItem>
+          <MenuItem value={20}>HR</MenuItem>
+          <MenuItem value={30}>Finance</MenuItem>
+          <MenuItem value={40}>Marketing</MenuItem>
+          <MenuItem value={50}>Data Science</MenuItem>
+          <MenuItem value={60}>IT</MenuItem>
+          <MenuItem value={70}>Consulting</MenuItem>
+        </Select>
+      </FormControl>
+    </Box>
+
+                <MdOutlineLocationOn className="text-3xl absolute left-5 top-16 md:top-7 md:left-[300px] text-gray-500 " />
                 <button
-                  className="min-w-[240px] max-w-full bg-green-700 text-white py-3 px-4 rounded-md mx-3 md:mx-0"
+                  className="min-w-[200px] max-w-full bg-green-700 text-white py-3 px-4 rounded-md mx-3 md:mx-0"
                   onClick={() => setCurrentPage(1)} // Reset page on search
                 >
                   Search jobs
