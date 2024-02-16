@@ -48,7 +48,7 @@ function Jobs() {
                   }}
                 />
                 <MdOutlineLocationOn className="text-3xl absolute left-12 top-16 md:top-7 md:left-[500px] text-gray-500 " />
-                <Link onClick={scrollToTop} to="/jobs">
+                <Link onClick={scrollToTop} to="/JobSearch">
                   <Suspense fallback={<Loader />}>
                     <button className="min-w-[240px] max-w-full bg-green-700 text-white py-3 px-4 rounded-md mx-3 md:mx-0">
                       Search jobs

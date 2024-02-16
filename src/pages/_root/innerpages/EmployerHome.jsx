@@ -409,7 +409,7 @@ const EmployerHome = () => {
       </div>
       <div className="mt-24 ml-10 mr-10">
         <Container>
-          <div className="bg-blue-100 p-8 rounded-xl md:flex items-center">
+          <div className="bg-blue-100 p-8 rounded-xl md:flex items-center shadow-lg hover:shadow-2xl">
             <div className="md:w-2/5 md:mr-8">
               <img src={job} className="w-full" alt="job" />
             </div>
@@ -435,8 +435,8 @@ const EmployerHome = () => {
 
         <Container>
           <div className="mt-16 ">
-            <div className="grid grid-cols-2  md:grid-cols-4 gap-4 bg-gray-200 p-4 rounded-xl">
-              <img src={tata} alt="Tata" className="w-full xl:w-[40%] xl:h-[70%]  md:w-[40%] md:h-[70%]" />
+            <div className="grid grid-cols-2  md:grid-cols-4 gap-4 bg-gray-200 p-4 rounded-xl shadow-lg hover:shadow-2xl ">
+              <img src={tata} alt="Tata" className="w-full xl:w-[40%] xl:h-[70%]  md:w-[40%] md:h-[70%] " />
               <img src={hp} alt="HP" className="w-full xl:w-[40%] xl:h-[70%] md:w-[40%] md:h-[70%]" />
               <img src={intel} alt="Intel" className="w-full xl:w-[40%] xl:h-[70%] md:w-[40%] md:h-[70%]" />
               <img src={ibm} alt="IBM" className="w-full xl:w-[40%] xl:h-[70%] md:w-[40%] md:h-[70%]" />

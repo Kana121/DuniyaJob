@@ -8,9 +8,21 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-const pages = [ "Find Candidates"];
+import { useNavigate } from "react-router-dom"; // Import useNavigate from React Router
+
+const pages = [
+  { name: "Post a Job", path: "/PostJob" },
+  { name: "Find Candidates", path: "/findcandidates" },
+];
+
 const DrawerComp = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
+  const navigate = useNavigate(); // Get navigate function from React Router
+
+  const handleNavigate = (path) => {
+    setOpenDrawer(false); // Close drawer when navigating
+    navigate(path); // Navigate to the specified path
+  };
 
   return (
     <React.Fragment>
@@ -21,9 +33,9 @@ const DrawerComp = () => {
       >
         <List>
           {pages.map((page, index) => (
-            <ListItemButton key={index}>
+            <ListItemButton key={index} onClick={() => handleNavigate(page.path)}>
               <ListItemIcon>
-                <ListItemText>{page}</ListItemText>
+                <ListItemText>{page.name}</ListItemText>
               </ListItemIcon>
             </ListItemButton>
           ))}

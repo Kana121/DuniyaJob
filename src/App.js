@@ -36,6 +36,10 @@ import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
 import Jobs from "./pages/_root/innerpages/Jobs";
 import JobDetails from "./components/JobDetails";
 
+
+// import RtlLayout from "../src/views/rtl";
+// import RtlLayout from "../src/views/rtl/index.jsx";
+
 function App() {
   // const [color, setcolor] = useState("Blue")
   // const click = color => {
@@ -96,7 +100,9 @@ function App() {
         <Route path="/apply-job" element={<ApplyForm />} />
         <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
-        
+
+
+       
         
       </Route>
     </Routes>
