@@ -1,9 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../../../components/Navbar';
 import { Typography } from '@mui/material';
 import { Link } from "react-router-dom";
-
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 const EmployeeSignup = () => {
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    mobileNumber: ''
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:8080/register', formData);
+      console.log('Response:', response.data);
+      console.log('Status:', response.status);
+      // Handle response as needed
+      if(response.status===202){
+      navigate('/otp');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error as needed
+    }
+  };
   return (
     <>
       <div className="min-h-screen flex flex-col">
@@ -20,17 +50,19 @@ const EmployeeSignup = () => {
           <div className="md:w-1/2 p-8">
             <Typography variant="h4" className="text-white text-center md:text-left mb-8">Employee Signup</Typography>
             <div className="bg-white rounded-lg shadow-md p-5">
-              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="string" placeholder="Name" />
-              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="number" placeholder="Phone Number" />
-              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="email" placeholder="Email Address" />
+            <form onSubmit={handleSubmit}>
+              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="text" placeholder="Name" onChange={handleChange} name="name" value={formData.name} />
+              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="number" placeholder="Phone Number" onChange={handleChange} name="mobileNumber" value={formData.mobileNumber} />
+              <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded-xl mt-5" type="email" placeholder="Email Address" onChange={handleChange} name="email" value={formData.email}/>
               <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer mt-2">
                 <input className="mr-1" type="checkbox" />
                 <span className=' text-black'>Remember Me</span>
               </label>
               <div className="text-center md:text-left mt-4">
-                <Link to="/otp">
+                {/* <Link to="/otp">
                   <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Get OTP</button>
-                </Link>
+                </Link> */}
+                <button type="submit">Register Now</button>
               </div>
               <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-neutral-300 after:mt-0.5 after:flex-1 after:border-t after:border-neutral-300">
                 <p className="mx-4 mb-0 text-center font-semibold text-slate-500">Or</p>
@@ -49,6 +81,7 @@ const EmployeeSignup = () => {
                       d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
                 </button>
+
                 <button
                   type="button"
                   className="inlne-block mx-1 h-9 w-9 rounded-full ml-2 bg-blue-600 hover:bg-blue-700 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]">
@@ -76,7 +109,9 @@ const EmployeeSignup = () => {
                       d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                   </svg>
                 </button>
+                
               </div>
+              </form>
             </div>
           </div>
         </section>
