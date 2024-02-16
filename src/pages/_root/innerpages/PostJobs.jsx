@@ -14,6 +14,9 @@ const PostJobs = () => {
   const [experience, setExperience] = useState("");
   const [role, setRole] = useState("");
   const [location, setLocation] = useState("");
+  const [education, setEducation] = useState("");
+  const [gender, setGender] = useState("");
+  const [englishlevel, setEnglishLevel] = useState("");
 
   // const navigate = useNavigate();
 
@@ -42,7 +45,10 @@ const PostJobs = () => {
       experience,
       role,
       location,
-      logo
+      logo,
+      education,
+      gender,
+      englishlevel,
     };
     e.preventDefault();
     if (company === "") {
@@ -79,7 +85,7 @@ const PostJobs = () => {
 
         <form className=" bg-transparent backdrop-blur-xl border rounded-md ">
           <div className="form-group">
-            <label style={{ color: "black" }} htmlFor="name">
+            <label style={{ color: "white" }} htmlFor="name">
               Company Name
             </label>
             <input
@@ -92,7 +98,7 @@ const PostJobs = () => {
             />
           </div>
           <div className="form-group">
-            <label style={{ color: "black" }} htmlFor="name">
+            <label style={{ color: "white" }} htmlFor="name">
               Enter Job Location
             </label>
             <input
@@ -105,7 +111,7 @@ const PostJobs = () => {
             />
           </div>
           <div className="form-group">
-            <label style={{ color: "black" }} htmlFor="logo">
+            <label style={{ color: "white" }} htmlFor="logo">
               Company logo
             </label>
             <label>
@@ -119,27 +125,20 @@ const PostJobs = () => {
             </label>
           </div>
           <div className="form-group">
-            <label style={{ color: "black" }}>What position are you posting for?</label>
-            <select
-              id="dropdown"
+            <label style={{ color: "white" }}>What position are you posting for?</label>
+            <input
+              type="text"
               name="role"
               className="form-control"
+              placeholder="Enter Position"
               onChange={(e) => setPosition(e.target.value)}
               required
-            >
-              <option disabled selected value>
-                Select position
-              </option>
-              <option>Frontend</option>
-              <option>Backend</option>
-              <option>Full Stack</option>
-              <option>Devops</option>
-              <option>Digital Marketing</option>
-            </select>
+            />
+              
           </div>
           <div className="form-group">
-            <label style={{ color: "black" }} htmlFor="name">
-              Enter Job Role
+            <label style={{ color: "white" }} htmlFor="name">
+              Enter Job Role (Description)
             </label>
             <input
               type="text"
@@ -152,7 +151,16 @@ const PostJobs = () => {
           </div>
 
           <div className="form-group" onChange={(e) => setExperience(e.target.value)}>
-            <label style={{ color: "black" }}>Experience </label>
+            <label style={{ color: "white" }}>Experience </label>
+            <label>
+              <input
+                name="user-recommend"
+                value="Fresher"
+                type="radio"
+                className="input-radio"
+              />
+              <span style={{ color: "white" }}>Fresher</span>
+            </label>
             <label>
               <input
                 name="user-recommend"
@@ -160,7 +168,7 @@ const PostJobs = () => {
                 type="radio"
                 className="input-radio"
               />
-              <span style={{ color: "black" }}>0-1 Year</span>
+              <span style={{ color: "white" }}>0-1 Year</span>
             </label>
             <label>
               <input
@@ -169,7 +177,7 @@ const PostJobs = () => {
                 type="radio"
                 className="input-radio"
               />
-              <span style={{ color: "black" }}>2-3 Years</span>
+              <span style={{ color: "white" }}>2-3 Years</span>
             </label>
             <label>
               <input
@@ -178,7 +186,7 @@ const PostJobs = () => {
                 type="radio"
                 className="input-radio"
               />
-              <span style={{ color: "black" }}>4-5 Years</span>
+              <span style={{ color: "white" }}>4-5 Years</span>
             </label>
             <label>
               <input
@@ -187,12 +195,12 @@ const PostJobs = () => {
                 type="radio"
                 className="input-radio"
               />
-              <span style={{ color: "black" }}>5+ Years</span>
+              <span style={{ color: "white" }}>5+ Years</span>
             </label>
           </div>
 
           <div className="form-group">
-            <label style={{ color: "black" }}>Salary</label>
+            <label style={{ color: "white" }}>Salary</label>
             <select
               className="form-control"
               onChange={(e) => setSalary(e.target.value)}
@@ -201,11 +209,58 @@ const PostJobs = () => {
               <option disabled selected value>
                 Select Salary
               </option>
-              <option value="0-15K">0-15K</option>
+              <option value="0-10K">0-10K</option>
+              <option value="10-15K">10-15K</option>
               <option value="15-30K">15-30K</option>
               <option value="30K-50K">30K-50K</option>
               <option value="50K-80K">50K-80K</option>
               <option value="80K+">80K+</option>
+            </select>
+          </div>
+          <div className="form-group">
+            <label style={{ color: "white" }}>Education</label>
+            <select
+              className="form-control"
+              onChange={(e) => setEducation(e.target.value)}
+              required
+            >
+              <option disabled selected value>
+                Select Education
+              </option>
+              <option>10th Pass</option>
+              <option>12th Pass</option>
+              <option>Graduate</option>
+              <option>Post Graduate</option>              
+            </select>
+          </div>
+          <div className="form-group">
+            <label style={{ color: "white" }}>Gender</label>
+            <select
+              className="form-control"
+              onChange={(e) => setGender(e.target.value)}
+              required
+            >
+              <option disabled selected value>
+                Select Gender
+              </option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Both</option>                            
+            </select>
+          </div>
+          <div className="form-group">
+            <label style={{ color: "white" }}>Endlish Level</label>
+            <select
+              className="form-control"
+              onChange={(e) => setEnglishLevel(e.target.value)}
+              required
+            >
+              <option disabled selected value>
+                Select English Level
+              </option>
+              <option>Beginner</option>
+              <option>Intermediate</option>
+              <option>Advanced</option>             
             </select>
           </div>
           <div className="form-group">

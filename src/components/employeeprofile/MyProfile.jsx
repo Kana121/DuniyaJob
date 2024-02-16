@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
@@ -13,32 +13,30 @@ import Stack from "@mui/joy/Stack";
 import Select from "@mui/joy/Select";
 import Option from "@mui/joy/Option";
 import Typography from "@mui/joy/Typography";
-// import Tabs from "@mui/joy/Tabs";
-// import TabList from "@mui/joy/TabList";
-// import Tab, { tabClasses } from "@mui/joy/Tab";
-// import Breadcrumbs from "@mui/joy/Breadcrumbs";
 import Card from "@mui/joy/Card";
 import CardActions from "@mui/joy/CardActions";
 import CardOverflow from "@mui/joy/CardOverflow";
-
-// import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
-// import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import AccessTimeFilledRoundedIcon from "@mui/icons-material/AccessTimeFilledRounded";
-// import VideocamRoundedIcon from "@mui/icons-material/VideocamRounded";
-// import InsertDriveFileRoundedIcon from "@mui/icons-material/InsertDriveFileRounded";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
-
-// import DropZone from "./DropZone";
-import FileUpload from "./FileUpload";
 import CountrySelector from "./CountrySelector";
 import EditorToolbar from "./EditorToolbar";
-import FileUploader from "../FileUploader";
-// import { Link } from "react-router-dom";
 import FormDialog from "./FormDialogue";
 
-
 export default function MyProfile() {
+  const [resumeFile, setResumeFile] = useState(null);
+  const fileInputRef = useRef(null);
+
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    setResumeFile(file);
+  };
+
+  const handleUpdateResumeClick = () => {
+    // Trigger file input dialog
+    fileInputRef.current.click();
+  };
+
   return (
     <Box sx={{ flex: 1, width: "100%" }}>
       <Box
@@ -50,34 +48,6 @@ export default function MyProfile() {
         }}
       >
         <Box sx={{ px: { xs: 2, md: 6 } }}>
-          {/* <Breadcrumbs
-            size="sm"
-            aria-label="breadcrumbs"
-            separator={<ChevronRightRoundedIcon fontSize="sm" />}
-            sx={{ pl: 0 }}
-          >
-            <Link
-              underline="none"
-              color="neutral"
-              href="#some-link"
-              aria-label="Home"
-            >
-              <HomeRoundedIcon />
-            </Link>
-            <Link
-              underline="hover"
-              color="neutral"
-              href="#some-link"
-              fontSize={12}
-              fontWeight={500}
-            >
-              Users
-            </Link>
-
-            <Typography color="primary" fontWeight={500} fontSize={12}>
-              My profile
-            </Typography>
-          </Breadcrumbs> */}
           <div className=" sticky">
             <Typography
               level="h2"
@@ -88,47 +58,6 @@ export default function MyProfile() {
             </Typography>
           </div>
         </Box>
-        {/* <Tabs
-          defaultValue={0}
-          sx={{
-            bgcolor: 'transparent',
-          }}
-        >
-          <TabList
-            tabFlex={1}
-            size="sm"
-            sx={{
-              pl: { xs: 0, md: 4 },
-              justifyContent: 'left',
-              [`&& .${tabClasses.root}`]: {
-                fontWeight: '600',
-                flex: 'initial',
-                color: 'text.tertiary',
-                [`&.${tabClasses.selected}`]: {
-                  bgcolor: 'transparent',
-                  color: 'text.primary',
-                  '&::after': {
-                    height: '2px',
-                    bgcolor: 'primary.500',
-                  },
-                },
-              },
-            }}
-          >
-            <Tab sx={{ borderRadius: '6px 6px 0 0' }} indicatorInset value={0}>
-              Settings
-            </Tab>
-            <Tab sx={{ borderRadius: '6px 6px 0 0' }} indicatorInset value={1}>
-              Team
-            </Tab>
-            <Tab sx={{ borderRadius: '6px 6px 0 0' }} indicatorInset value={2}>
-              Plan
-            </Tab>
-            <Tab sx={{ borderRadius: '6px 6px 0 0' }} indicatorInset value={3}>
-              Billing
-            </Tab>
-          </TabList>
-        </Tabs> */}
       </Box>
       <Stack
         spacing={4}
@@ -144,7 +73,8 @@ export default function MyProfile() {
           <Box sx={{ mb: 1 }}>
             <Typography level="title-md">Personal info</Typography>
             <Typography level="body-sm">
-              Customize how your profile information will apper to the networks.
+              Customize how your profile information will appear to the
+              networks.
             </Typography>
           </Box>
           <Divider />
@@ -204,10 +134,7 @@ export default function MyProfile() {
               <Stack direction="row" spacing={2}>
                 <FormControl>
                   <FormLabel>Role</FormLabel>
-                  <Input size="sm" 
-                  placeholder="python developer, "
-                  // defaultValue="UI Developer"
-                   />
+                  <Input size="sm" placeholder="python developer" />
                 </FormControl>
                 <FormControl sx={{ flexGrow: 1 }}>
                   <FormLabel>Email</FormLabel>
@@ -216,7 +143,6 @@ export default function MyProfile() {
                     type="email"
                     startDecorator={<EmailRoundedIcon />}
                     placeholder="email"
-                    // defaultValue="siriwatk@test.com"
                     sx={{ flexGrow: 1 }}
                   />
                 </FormControl>
@@ -224,29 +150,6 @@ export default function MyProfile() {
               <div>
                 <CountrySelector />
               </div>
-              {/* <div>
-                <FormControl sx={{ display: { sm: "contents" } }}>
-                  <FormLabel>Timezone</FormLabel>
-                  <Select
-                    size="sm"
-                    startDecorator={<AccessTimeFilledRoundedIcon />}
-                    defaultValue="1"
-                  >
-                    <Option value="1">
-                      Indochina Time (Bangkok){" "}
-                      <Typography textColor="text.tertiary" ml={0.5}>
-                        — GMT+07:00
-                      </Typography>
-                    </Option>
-                    <Option value="2">
-                      Indochina Time (Ho Chi Minh City){" "}
-                      <Typography textColor="text.tertiary" ml={0.5}>
-                        — GMT+07:00
-                      </Typography>
-                    </Option>
-                  </Select>
-                </FormControl>
-              </div> */}
             </Stack>
           </Stack>
           <Stack
@@ -313,47 +216,13 @@ export default function MyProfile() {
                 type="email"
                 startDecorator={<EmailRoundedIcon />}
                 placeholder="email"
-                // defaultValue="siriwatk@test.com"
                 sx={{ flexGrow: 1 }}
               />
             </FormControl>
             <div>
               <CountrySelector />
             </div>
-            <div>
-              {/* <FormControl sx={{ display: { sm: "contents" } }}>
-                <FormLabel>Timezone</FormLabel>
-                <Select
-                  size="sm"
-                  startDecorator={<AccessTimeFilledRoundedIcon />}
-                  defaultValue="1"
-                >
-                  <Option value="1">
-                    Indochina Time (Bangkok){" "}
-                    <Typography textColor="text.tertiary" ml={0.5}>
-                      — GMT+07:00
-                    </Typography>
-                  </Option>
-                  <Option value="2">
-                    Indochina Time (Ho Chi Minh City){" "}
-                    <Typography textColor="text.tertiary" ml={0.5}>
-                      — GMT+07:00
-                    </Typography>
-                  </Option>
-                </Select>
-              </FormControl> */}
-            </div>
           </Stack>
-          <CardOverflow sx={{ borderTop: "1px solid", borderColor: "divider" }}>
-            <CardActions sx={{ alignSelf: "flex-end", pt: 2 }}>
-              <Button size="sm" variant="outlined" color="neutral">
-                Cancel
-              </Button>
-              <Button size="sm" variant="solid">
-                Save
-              </Button>
-            </CardActions>
-          </CardOverflow>
         </Card>
 
         <Card>
@@ -376,76 +245,106 @@ export default function MyProfile() {
               275 characters left
             </FormHelperText>
           </Stack>
-          <CardOverflow sx={{ borderTop: "1px solid", borderColor: "divider" }}>
-            <CardActions sx={{ alignSelf: "flex-end", pt: 2 }}>
-              <Button size="sm" variant="outlined" color="neutral">
-                Cancel
-              </Button>
-              <Button size="sm" variant="solid">
-                Save
-              </Button>
-            </CardActions>
-          </CardOverflow>
         </Card>
 
         <Card>
-          <Box sx={{mb:1}}>
-             <Box display={'flex '} sx={{width:'100%',justifyContent:'space-between',}}>
-             <Typography level="title-md">Education</Typography>
-             
-             {/* <Link to={'/'} >
-             <Typography sx={{alignSelf: "flex-end",color:'blue'}} >Add</Typography>
-             </Link> */}
-             <Box>
-              <FormDialog sx={{alignSelf:'flex-end'}}/>
-             </Box>
-             
-             </Box> 
-             
-
+          <Box sx={{ mb: 1 }}>
+            <Box
+              display={"flex "}
+              sx={{ width: "100%", justifyContent: "space-between" }}
+            >
+              <Typography level="title-md">Education</Typography>
+              <Box>
+                <FormDialog sx={{ alignSelf: "flex-end" }} />
+              </Box>
+            </Box>
           </Box>
+          <Divider />
+          <Stack spacing={2} sx={{ my: 1 }}>
+            <Stack direction="row" spacing={2}>
+              <FormControl>
+                <FormLabel>Degree</FormLabel>
+                <Input size="sm" placeholder="Bachelor's in Computer Science" />
+              </FormControl>
+              <FormControl sx={{ flexGrow: 1 }}>
+                <FormLabel>Institution</FormLabel>
+                <Input size="sm" placeholder="University of XYZ" />
+              </FormControl>
+            </Stack>
+            <Stack direction="row" spacing={2}>
+              <FormControl>
+                <FormLabel>Year of Graduation</FormLabel>
+                <Input size="sm" type="number" placeholder="2022" />
+              </FormControl>
+              <FormControl sx={{ flexGrow: 1 }}>
+                <FormLabel>GPA</FormLabel>
+                <Input size="sm" placeholder="3.8" />
+              </FormControl>
+            </Stack>
+          </Stack>
         </Card>
-
 
         <Card>
           <Box sx={{ mb: 1 }}>
             <Typography level="title-md">Upload Resume</Typography>
             <Typography level="body-sm">
-              {/* Share a few snippets of your work. */}
+              Upload your resume in PDF format.
             </Typography>
           </Box>
           <Divider />
           <Stack spacing={2} sx={{ my: 1 }}>
-            {/* <DropZone /> */}
-           
-            {/* <FileUpload
-              icon={<InsertDriveFileRoundedIcon />}
-              fileName="Tech design requirements.pdf"
-              fileSize="200 kB"
-              progress={100}
-            />
-            <FileUpload
-              icon={<VideocamRoundedIcon />}
-              fileName="Dashboard prototype recording.mp4"
-              fileSize="16 MB"
-              progress={40}
-            /> */}
-            <Box  sx={{background: 'radial-gradient(circle, rgba(217,231,233,1) 53%, rgba(212,219,233,1) 94%)',borderRadius:'10px'}}>
-              <FileUploader />
+            <FormControl>
+              <input
+                accept=".pdf"
+                style={{ display: "none" }}
+                id="resume-upload"
+                type="file"
+                onChange={handleFileChange}
+                ref={fileInputRef}
+              />
+              <label htmlFor="resume-upload">
+                <Button
+                  component="span"
+                  size="sm"
+                  variant="outlined"
+                  color="primary"
+                >
+                  Upload Resume (PDF)
+                </Button>
+              </label>
+              <Button
+                size="sm"
+                variant="outlined" // Use the same variant as the "Upload Resume (PDF)" button
+                color="primary" // Use the same color as the "Upload Resume (PDF)" button
+                onClick={handleUpdateResumeClick}
+                sx={{ width: "162px" }} // Adjust the width as needed
+              >
+                Update Resume
+              </Button>
+              {resumeFile && (
+                <Box sx={{ mb: 1 }}>
+                  <Typography>{resumeFile.name}</Typography>
+                  <a
+                    href={URL.createObjectURL(resumeFile)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Open Resume
+                  </a>
+                </Box>
+              )}
+            </FormControl>
+            <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
+              <CardActions sx={{ pt: 2, pb: 4 }}>
+                <Button size="sm" variant="outlined" color="neutral">
+                  Cancel
+                </Button>
+                <Button size="sm" variant="solid">
+                  Save
+                </Button>
+              </CardActions>
             </Box>
-            <FileUpload />
-          
           </Stack>
-          <CardOverflow sx={{ borderTop: "1px solid", borderColor: "divider" }}>
-            <CardActions sx={{ alignSelf: "flex-end", pt: 2 }}>
-              <Button size="sm" variant="outlined" color="neutral">
-                Cancel
-              </Button>
-              <Button size="sm" variant="solid">
-                Save
-              </Button>
-            </CardActions>
-          </CardOverflow>
         </Card>
       </Stack>
     </Box>
