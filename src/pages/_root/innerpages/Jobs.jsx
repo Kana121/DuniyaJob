@@ -54,6 +54,7 @@ function Jobs() {
     }
   };
 
+  
   const handleNextPage = () => {
     if (indexOfLastItem < filteredData.length) {
       setCurrentPage(currentPage + 1);
