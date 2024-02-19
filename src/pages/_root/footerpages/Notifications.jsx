@@ -49,7 +49,7 @@ export default function Notifcations() {
                 <p className=''>1 day ago</p>
             </div>
         </div>
-
+x
         {/*Rizky */}
         <div className='flex flex-row items-center mt-6 px-6rounded-md py-6 w-full ' >
             <img src={Rizky} alt='Rizkys profile picture' className='mr-4 w-10 h-10 ' />
