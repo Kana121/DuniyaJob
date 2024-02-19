@@ -19,6 +19,8 @@ import ChatIcon from '@mui/icons-material/Chat';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
 import SettingsIcon from '@mui/icons-material/Settings';
+import { Link } from "react-router-dom";
+import { Outlet } from "@mui/icons-material";
 
 
 const drawWidth = 250; 
@@ -42,11 +44,11 @@ function App(){
 				Duniya Jobs
 			</Typography> 
 			<List sx={{ backgroundColor: "#09212E" }}> 
-				<ListItemButton sx={{ color: "white" }}> 
+				<ListItemButton sx={{ color: "white" }} component={Link} to="/Dashboard-employer-Home"> 
 					<ListItemIcon sx={{ color: "white" }}> 
 						{<HomeIcon />} 
 					</ListItemIcon> 
-					<ListItemText primary={"Home"} /> 
+					<ListItemText primary={"Home"}/> 
 				</ListItemButton> 
 				<ListItemButton sx={{ color: "white" }}> 
 					<ListItemIcon sx={{ color: "white" }}> 
@@ -170,6 +172,8 @@ function App(){
 					> 
 						<Toolbar /> 
 						<Typography paragraph> 
+						
+						
 							{/*GeeksforGeeks provides Free Tutorials, 
 							Millions of Articles, Live, 
 							Online and Classroom Courses ,Frequent 
