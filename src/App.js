@@ -42,6 +42,8 @@ import DashboardPostJob from "./pages/_root/innerpages/DashboardPostJob";
 
 import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
 import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
+import Home from "./pages/_root/dashboardpages/Home";
+
 
 function App() {
   // const [color, setcolor] = useState("Blue")
@@ -108,6 +110,7 @@ function App() {
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
+        <Route path="/Dashboard-employer-Home" element={<Home/>}/>
 
        
         
