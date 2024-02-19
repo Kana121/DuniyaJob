@@ -42,7 +42,8 @@ import DashboardPostJob from "./pages/_root/innerpages/DashboardPostJob";
 
 import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
 import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
-import Home from "./pages/_root/dashboardpages/Home";
+import Home from "./components/dashboard/Home";
+// import Home from "./pages/_root/dashboardpages/Home";
 
 
 function App() {
