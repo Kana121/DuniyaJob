@@ -136,6 +136,7 @@ const EmployerDashboard = () => {
               </ListItem>
             ))}
           </List>
+          
         </div>
       </Drawer>
       <main style={{ flexGrow: 1, padding: "20px" }}>
