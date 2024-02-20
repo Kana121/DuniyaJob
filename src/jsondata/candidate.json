@@ -1,29 +1,30 @@
 [
     {
       "id": 1,
-      "image": "https://cpr.pt/wp-content/uploads/2019/01/16176889_112685309244626_578204711_n.jpg",
-      "interview": "Mark has fixed an interview with Elon."
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fujitsu-Logo.svg/2560px-Fujitsu-Logo.svg.png",
+      "interview": "Japanese tech giant specializing in IT equipment and services."
     },
     {
         "id": 2,
-        "image": "https://images.unsplash.com/photo-1606002830191-c1b4f20e6cda?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "interview": "Mark has fixed an interview with me."
+        "image": "https://logos-world.net/wp-content/uploads/2023/03/Cognizant-Logo.png",
+        "interview": "Leading Fortune 500 firm providing global Information Technology services."
       },
       {
         "id": 3,
-        "image": "/src/assets/file-upload.svg",
-        "interview": "Mark has fixed an interview with me.gghvghvghvg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/768px-Tata_Consultancy_Services_Logo.svg.png",
+        "interview":"Multinational Information Technology powerhouse offering consulting."
       },
       {
         "id": 4,
-        "image": "/src/assets/file-upload.svg",
-        "interview": "Mark has fixed an interview with me.gghvghvghvg"
+        "image": "https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png",
+        "interview": "Global leader in consulting, technology, professional services."
       },
       {
         "id": 5,
-        "image": "/src/assets/file-upload.svg",
-        "interview": "Mark has fixed an interview with me.gghvghvghvg"
+        "image": "https://1000logos.net/wp-content/uploads/2021/04/Accenture-logo.png",
+        "interview": "World-renowned consulting and professional services with leading firm."
       }
+
     
   ]
   
