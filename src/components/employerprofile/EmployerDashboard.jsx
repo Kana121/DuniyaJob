@@ -7,21 +7,23 @@ import Home from './Home';
 
 function EmployerDashboard() {
   const [activeSection, setActiveSection] = useState('Dashboard');
-  const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
-  const toggleSidebar = () => {
-    setOpenSidebarToggle(!openSidebarToggle);
-  };
+  const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
 
-  const handleSidebarItemClick = (section) => {
+
+  const OpenSidebar = () => {
+    setOpenSidebarToggle(!openSidebarToggle)
+  }
+
+  const handleItemClick = (section) => {
     setActiveSection(section);
-    
+  
   };
 
   return (
     <div className='grid-container'>
-      <Header toggleSidebar={toggleSidebar}/>
-      <Sidebar handleItemClick={handleSidebarItemClick} />
+      <Header OpenSidebar={OpenSidebar}/>
+      <Sidebar  openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}  handleItemClick={handleItemClick} />
       <Home activeSection={activeSection} />
     </div>
   );

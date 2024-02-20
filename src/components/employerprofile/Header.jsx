@@ -30,10 +30,10 @@ import { BsJustify } from 'react-icons/bs';
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, } from 'react-icons/bs';
 import './dash.css'
 
-function Header({ toggleSidebar }) {
+function Header({ OpenSidebar }) {
   return (
     <header className='header'>
-      <div className='menu-icon' onClick={toggleSidebar}>
+      <div className='menu-icon' onClick={OpenSidebar}>
         <BsJustify className='icon' />
       </div>
       {/* Add other header content here */}
