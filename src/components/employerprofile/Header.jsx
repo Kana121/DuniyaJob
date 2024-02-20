@@ -29,6 +29,7 @@ import { BsJustify } from 'react-icons/bs';
 
 import { BsFillBellFill, BsFillEnvelopeFill, BsPersonCircle, BsSearch, } from 'react-icons/bs';
 import './dash.css'
+import { Stack } from '@mui/material';
 
 function Header({ OpenSidebar }) {
   return (
@@ -42,9 +43,11 @@ function Header({ OpenSidebar }) {
          <BsSearch className='icon' />
        </div>
        <div className='header-right'>
-         <BsFillBellFill className='icon' />
-         <BsFillEnvelopeFill className='icon' />
-         <BsPersonCircle className='icon' />
+       <Stack direction={'row'}>
+         <BsFillBellFill className='icon cursor-pointer'  />
+         <BsFillEnvelopeFill className='icon cursor-pointer' />
+         <BsPersonCircle className='icon cursor-pointer' />
+       </Stack>
        </div>
     </header>
   );
