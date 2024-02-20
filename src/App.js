@@ -43,6 +43,8 @@ import JobDetails from "./components/JobDetails";
 import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
 import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
 // import Home from "./components/dashboard/Home";
+import ContactUs from "./pages/_root/footerpages/ContactUs";
+import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
 import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
 // import Home from "./pages/_root/dashboardpages/Home";
 
@@ -107,12 +109,14 @@ function App() {
         <Route path="/apply-job" element={<ApplyForm />} />
         <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
-        <Route path="/Employer-Dashboard" element={<EmployerDashboard/>}/>
+        {/* <Route path="/Employer-Dashboard" element={<EmployerDashboard/>}/> */}
+        <Route path="/contact-us" element={<ContactUs/>}/>
 
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
       
+        <Route path="/Employer-Dashboard" element={<EmployerDashboard />} />
 
        
         
