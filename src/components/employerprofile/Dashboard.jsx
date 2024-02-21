@@ -6,6 +6,7 @@ import
  { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line } 
  from 'recharts';
 import './dash.css'
+import SearchSuggestions from './SearchSuggestions';
 // import EmployerDashboard from "./EmployerDashboard";
 
 
@@ -138,8 +139,13 @@ function Dashboard() {
                 <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                 </LineChart>
             </ResponsiveContainer>
+                
+                
+
+                
 
         </div>
+            <SearchSuggestions />
     </main>
   )
 }

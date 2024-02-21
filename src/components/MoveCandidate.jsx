@@ -4,6 +4,8 @@ function MoveCandidate({ candidate }) {
   return (
     <>
       {candidate && (
+        <div className="moving-candidates bg-white rounded-full p-4 md:w-[300px] lg:w-[400px] xl:w-[500px] break-words flex items-center ">
+          <div className="left">
         <div className="moving-candidates bg-white rounded-full p-4 w-full md:w-[300px] break-words flex flex-col md:flex-row items-center">
           <div className="left hidden md:block"> {/* Hide on small screens */}
             <img
