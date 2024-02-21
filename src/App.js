@@ -50,6 +50,7 @@ import ErrorPage from './components/errorpage/ErrorPage'
 
 import ContactUs from "./pages/_root/footerpages/ContactUs";
 import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
+import Home from "./components/employerprofile/Home";
 // import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
 // import Home from "./pages/_root/dashboardpages/Home";
 
@@ -120,7 +121,7 @@ function App() {
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
-        <Route path="/Dashboard-employer-Home" element={<Home/>}/>
+        <Route path="/Dashboard-employer-Home" element={<Home />}/>
         <Route path="/error-page" element={ <ErrorPage /> } />
         
         <Route path="/Employer-Dashboard" element={<EmployerDashboard />} />
