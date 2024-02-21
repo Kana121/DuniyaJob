@@ -388,7 +388,7 @@ import amazon from "../../../assets/amazon.png";
 import cisco from "../../../assets/cisco.png";
 import google from "../../../assets/google_n.png";
 import hp from "../../../assets/hp.png";
-import ibm from "../../../assets/ibm_n.png";
+import ibm from "../../../assets/ibm_n.png"; 
 import infosys from "../../../assets/infosys_n.png";
 import intel from "../../../assets/intel.png";
 import landt from "../../../assets/landt.png";
