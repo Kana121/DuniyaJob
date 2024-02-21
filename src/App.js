@@ -43,6 +43,11 @@ import JobDetails from "./components/JobDetails";
 import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
 import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
 // import Home from "./components/dashboard/Home";
+import ErrorPage from './components/errorpage/ErrorPage'
+// import Errorpage from "./components/errorpage/Errorpage";
+
+
+
 import ContactUs from "./pages/_root/footerpages/ContactUs";
 import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
 import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
@@ -115,7 +120,9 @@ function App() {
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
-      
+        <Route path="/Dashboard-employer-Home" element={<Home/>}/>
+        <Route path="/error-page" element={ <ErrorPage /> } />
+        
         <Route path="/Employer-Dashboard" element={<EmployerDashboard />} />
 
        
