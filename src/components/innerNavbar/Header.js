@@ -47,7 +47,7 @@ const Header = () => {
               </Tabs>
               
               <Button href="/Employer-Dashboard"  sx={{ marginLeft: "10px" }} variant="contained">    
-                Post Job
+                Employer Dashboard
               </Button>
             </>
           )}

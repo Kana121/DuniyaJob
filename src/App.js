@@ -35,16 +35,22 @@ import PRIVACYPOLICY from "./pages/_root/footerpages/PrivacyPolicy";
 import EmployeeEditPage from "./pages/_root/innerpages/EmployeeEditPage";
 import Jobs from "./pages/_root/innerpages/Jobs";
 import JobDetails from "./components/JobDetails";
-import DashboardPostJob from "./pages/_root/innerpages/DashboardPostJob";
+// import DashboardPostJob from "./pages/_root/innerpages/DashboardPostJob";
 
 // import RtlLayout from "../src/views/rtl";
 // import RtlLayout from "../src/views/rtl/index.jsx";
 
 import ApplicationTracker from "./pages/_root/innerpages/ApplicationTracker";
 import EmployeeDashboard from "./pages/_root/innerpages/EmployeeDashboard";
-import Home from "./components/dashboard/Home";
+// import Home from "./components/dashboard/Home";
+import ErrorPage from './components/errorpage/ErrorPage'
+// import Errorpage from "./components/errorpage/Errorpage";
+
+
+
 import ContactUs from "./pages/_root/footerpages/ContactUs";
 import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
+// import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
 // import Home from "./pages/_root/dashboardpages/Home";
 
 
@@ -108,13 +114,15 @@ function App() {
         <Route path="/apply-job" element={<ApplyForm />} />
         <Route path="/Edit-profile"  element={<EmployeeEditPage />} />
         <Route path="/job-details/:FIELD1"  element={<JobDetails data={data} />}/>
-        {/* <Route path="/Dashboard-employer" element={<DashboardPostJob/>}/> */}
+        {/* <Route path="/Employer-Dashboard" element={<EmployerDashboard/>}/> */}
         <Route path="/contact-us" element={<ContactUs/>}/>
 
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
         <Route path="/Dashboard-employer-Home" element={<Home/>}/>
+        <Route path="/error-page" element={ <ErrorPage /> } />
+        
         <Route path="/Employer-Dashboard" element={<EmployerDashboard />} />
 
        

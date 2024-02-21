@@ -239,40 +239,41 @@ function Sidebar({ handleItemClick, activeSection , openSidebarToggle, OpenSideb
   return (
     <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
       <div className='sidebar-title'>
-        <div className='sidebar-brand'>
-          <BsCart3 className='icon_header'/> SHOP
+        <div className='sidebar-brand text-3xl'>
+          {/* <BsCart3 className='icon_header'/>  */}
+          Duniya Jobs
         </div>
         <span onClick={OpenSidebar} className='icon close_icon'>X</span>
       </div>
       <ul className='sidebar-list'>
         <li className={`sidebar-list-item ${activeSection === 'Dashboard' ? 'active' : ''}`} onClick={() => handleItemClick('Dashboard')}>
-          <a>
-            <BsGrid1X2Fill className='icon'/> Dashboard
+          <a className=''>
+            <BsGrid1X2Fill className='icon'/> Home
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Products' ? 'active' : ''}`} onClick={() => handleItemClick('Products')}>
           <a>
-            <BsFillArchiveFill className='icon'/> Products
+            <BsFillArchiveFill className='icon'/> Candidates
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Categories' ? 'active' : ''}`} onClick={() => handleItemClick('Categories')}>
           <a>
-            <BsFillGrid3X3GapFill className='icon'/> Categories
+            <BsFillGrid3X3GapFill className='icon'/> Post Job
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Customers' ? 'active' : ''}`} onClick={() => handleItemClick('Customers')}>
           <a>
-            <BsPeopleFill className='icon'/> Customers
+            <BsPeopleFill className='icon'/> Shortlisted
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Inventory' ? 'active' : ''}`} onClick={() => handleItemClick('Inventory')}>
           <a>
-            <BsListCheck className='icon'/> Inventory
+            <BsListCheck className='icon'/> Interview
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Reports' ? 'active' : ''}`} onClick={() => handleItemClick('Reports')}>
           <a>
-            <BsMenuButtonWideFill className='icon'/> Reports
+            <BsMenuButtonWideFill className='icon'/> Message
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Settings' ? 'active' : ''}`} onClick={() => handleItemClick('Settings')}>
