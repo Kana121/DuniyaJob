@@ -1,8 +1,9 @@
 import React from 'react';
-import Navbar from '../../../components/Navbar';
+// import Navbar from '../../../components/Navbar';
 import { Typography } from '@mui/material';
 import * as yup from 'yup'; // Import yup for validation
 import { useFormik } from 'formik'; // Import useFormik for form handling
+import Header from '../../../components/innerNavbar/Header';
 
 const ForgetPassword = () => {
   // Define validation schema using yup
@@ -25,9 +26,9 @@ const ForgetPassword = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <section className="flex flex-col md:flex-row justify-center items-center flex-grow bg-transparent">
+      <div className="min-h-screen flex flex-col ">
+        <Header />
+        <section className="flex flex-col md:flex-row justify-center items-center flex-grow bg-transparent mt-14">
           <div className="md:w-1/2 p-8">
             <Typography variant="h4" className="text-white text-center md:text-left mb-8">
               Forgot Your Password?
@@ -50,10 +51,13 @@ const ForgetPassword = () => {
                 {/* Submit button */}
                 <div className="text-center md:text-left mt-4">
                   <button
+                  onClick={() =>{
+                    alert('check your mail')
+                  }}
                     type="submit"
-                    className="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider"
+                    className="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs w-[70%] tracking-wider"
                   >
-                    Reset Password
+                    Verify
                   </button>
                 </div>
               </div>
