@@ -51,6 +51,7 @@ import ErrorPage from './components/errorpage/ErrorPage'
 import ContactUs from "./pages/_root/footerpages/ContactUs";
 import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
 import Home from "./components/employerprofile/Home";
+import CheckProfile from "./components/employeeprofile/CheckProfile";
 // import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
 // import Home from "./pages/_root/dashboardpages/Home";
 
@@ -109,7 +110,11 @@ function App() {
         <Route path="/terms-&-conditions" element={<TermsCondtions />}/>
         <Route path="/About-us" element={<AboutUs/>}/>
         <Route path="/Privacy-policy" element={<PRIVACYPOLICY />}/>
+        
         <Route path="/Employee-Profile" element={<EmployeeProfile />}/>
+        <Route path="/check" element={<CheckProfile />}/>
+
+
         <Route path="/Notifications" element={<Notifications />}/>
         <Route path="/EmployerHome" element={<EmployerHome />} />
         <Route path="/apply-job" element={<ApplyForm />} />

@@ -368,6 +368,10 @@ import CardActions from "@mui/joy/CardActions";
 import EmailRoundedIcon from "@mui/icons-material/EmailRounded";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import CountrySelector from "./CountrySelector";
+// import fs from 'fs'
+// import * as fs from 'fs';
+
+import profilesData from '../../jsondata/profiles.json';
 
 export default function MyProfile() {
   const [resumeFile, setResumeFile] = useState(null);
@@ -450,6 +454,16 @@ export default function MyProfile() {
     const profiles = JSON.parse(localStorage.getItem("profiles")) || [];
     localStorage.setItem("profiles", JSON.stringify([...profiles, formData]));
 
+    const newProfileData = {
+      id: newId, // Use the new ID
+      ...formData, // Add all form data
+    };
+    
+    // const updatedProfilesData = [...profilesData, newProfileData];
+  
+    // const fs = require('file-system')
+    // fs.writeFile('/src/jsondata/profiles.json', JSON.stringify(updatedProfilesData, null, 2));
+  
     // Reset form data
     setFormData({
       id: newId + 1, // Increment ID for the next profile
@@ -744,7 +758,7 @@ export default function MyProfile() {
                 <Button size="sm" variant="outlined" color="neutral">
                   Cancel
                 </Button>
-                <Button size="sm" variant="solid" onClick={handleSaveClick}>
+                <Button href="/check" size="sm" variant="solid" onClick={handleSaveClick}>
                   Save
                 </Button>
               </CardActions>
@@ -755,3 +769,4 @@ export default function MyProfile() {
     </Box>
   );
 }
+
