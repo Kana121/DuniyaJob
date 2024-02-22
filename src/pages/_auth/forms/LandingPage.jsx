@@ -1,10 +1,12 @@
-import React, { useEffect } from "react";
+// import React, { useEffect } from "react";
 import Navbar from "../../../components/Navbar";
 import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported
 import { Link } from "react-router-dom";
 import Footer from "../../../components/Footer";
-import MoveCandidate from "../../../components/MoveCandidate";
-import candidatesData from "../../../jsondata/candidate.json";
+// import MoveCandidate from "../../../components/MoveCandidate";
+// import candidatesData from "../../../jsondata/candidate.json";
+
+
 // import { useEffect } from "react";
 // import Navbar from "../../../components/Navbar";
 // import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported

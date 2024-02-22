@@ -168,17 +168,17 @@ const EmployeeLogin = () => {
                 <div className="mt-4 flex justify-between font-semibold text-sm">
                   <label className="flex text-slate-500 hover:text-slate-600 cursor-pointer">
                     <input className="mr-1" type="checkbox" />
-                    <span className="text-black">Remember Me</span>
+                    <span className="text-black text-sm">Remember Me</span>
                   </label>
-                  <Link to="/forget-password" className="text-blue-600 hover:text-blue-700 hover:underline">
+                  <Link to="/forget-password" className="text-blue-600 hover:text-blue-700 hover:underline ">
                     Forgot Password?
                   </Link>
                 </div>
 
                 {/* Submit button */}
-                <div className="text-center md:text-left mt-4">
+                <div className="text-center md:text-left mt-4 ">
                   <button
-                    className="bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider"
+                    className="bg-blue-600 hover:bg-blue-700 px-4 py-2 w-[70%] text-white uppercase rounded text-xs tracking-wider"
                     type="submit"
                   >
                     Login

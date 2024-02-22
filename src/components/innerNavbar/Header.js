@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import AddBusinessRoundedIcon from "@mui/icons-material/AddBusinessRounded";
 import DrawerComp from "./Drawer";
+import { Home } from "@mui/icons-material";
 const Header = () => {
   const [value, setValue] = useState();
   const theme = useTheme();
@@ -23,12 +24,12 @@ const Header = () => {
       <AppBar className="bg-gradient-to-r from-blue-300 via-sky-500 to-blue-900">
         <Toolbar>
           <Button href="/Home">
-          <AddBusinessRoundedIcon sx={{ transform: "scale(2)",color:'white' }} />
+          <Home sx={{ transform: "scale(2)",color:'white' }} />
           </Button> 
             
           {isMatch ? (
             <>
-              <Typography sx={{ fontSize: "2rem", paddingLeft: "10%" }}>
+              <Typography sx={{ fontSize: "1.2rem", paddingLeft: "5%" }}>
                 Duniya Jobs
               </Typography>
               <DrawerComp />

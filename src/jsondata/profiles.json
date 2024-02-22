@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Doe",
+      "role": "Software Engineer",
+      "email": "john@example.com",
+      "country": "United States",
+      "bio": "Experienced software engineer with a passion for building scalable web applications.",
+      "degree": "Bachelor of Science",
+      "institution": "University of Example",
+      "graduationYear": "2015",
+      "gpa": "3.8"
+    },
+    {
+      "id": 2,
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "role": "Data Scientist",
+      "email": "jane@example.com",
+      "country": "Canada",
+      "bio": "Data scientist specializing in machine learning and predictive analytics.",
+      "degree": "Master of Science",
+      "institution": "University of Example",
+      "graduationYear": "2017",
+      "gpa": "3.9"
+    }
+  ]
+  
