@@ -448,7 +448,7 @@ const EmployerHome = () => {
 
         <Container maxWidth="xl">
           <div className="mt-16">
-            <Typography variant="h2" className="text-white text-center mt-10">
+            <Typography variant="h2" className="text-black text-center mt-10">
               Why Choose Duniya Job Posting?
             </Typography>
             <Grids />

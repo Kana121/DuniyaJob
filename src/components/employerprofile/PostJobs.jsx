@@ -72,10 +72,10 @@ const PostJobs = () => {
 
 
   return (
-    <div className=" justify-center align-center" >
+    <div className=" justify-center align-center bg-gray-600" >
       {/* <Header /> */}
-      <div className="job-background mt-20 ">
-        <div className="title text-center font-bold mt-10 ">
+      <div className="job-background mt-10">
+        <div className="title text-center font-bold mt-5 text-black">
           <h2 className="">Post a Job</h2>
         </div>
       </div>
@@ -83,7 +83,7 @@ const PostJobs = () => {
 
         <h1 className="post-job text-2xl text-red-600 backdrop-blur-xl border rounded-lg p-1">Fill the form </h1>
 
-        <form className=" bg-transparent backdrop-blur-xl border rounded-md ">
+        <form className=" bg-transparent backdrop-blur-xl border rounded-md mb-7">
           <div className="form-group">
             <label style={{ color: "white" }} htmlFor="name">
               Company Name
@@ -91,7 +91,7 @@ const PostJobs = () => {
             <input
               type="text"
               name="name"
-              className="form-control"
+              className="form-control  text-black"
               placeholder="Enter Company Name"
               onChange={(e) => setCompany(e.target.value)}
               required
@@ -104,7 +104,7 @@ const PostJobs = () => {
             <input
               type="text"
               name="name"
-              className="form-control"
+              className="form-control  text-black"
               placeholder="Enter Job Location"
               onChange={(e) => setLocation(e.target.value)}
               required
@@ -129,7 +129,7 @@ const PostJobs = () => {
             <input
               type="text"
               name="role"
-              className="form-control"
+              className="form-control text-black"
               placeholder="Enter Position"
               onChange={(e) => setPosition(e.target.value)}
               required
@@ -143,7 +143,7 @@ const PostJobs = () => {
             <input
               type="text"
               name="name"
-              className="form-control"
+              className="form-control text-black"
               placeholder="Enter Job Role"
               onChange={(e) => setRole(e.target.value)}
               required
@@ -202,7 +202,8 @@ const PostJobs = () => {
           <div className="form-group">
             <label style={{ color: "white" }}>Salary</label>
             <select
-              className="form-control"
+              className="form-control  text-black"
+              placeholder="Select Salary"
               onChange={(e) => setSalary(e.target.value)}
               required
             >
@@ -220,7 +221,8 @@ const PostJobs = () => {
           <div className="form-group">
             <label style={{ color: "white" }}>Education</label>
             <select
-              className="form-control"
+              className="form-control  text-black"
+              placeholder="Select Education"
               onChange={(e) => setEducation(e.target.value)}
               required
             >
@@ -236,7 +238,8 @@ const PostJobs = () => {
           <div className="form-group">
             <label style={{ color: "white" }}>Gender</label>
             <select
-              className="form-control"
+              className="form-control  text-black"
+              placeholder="Select Gender"
               onChange={(e) => setGender(e.target.value)}
               required
             >
@@ -245,13 +248,13 @@ const PostJobs = () => {
               </option>
               <option>Male</option>
               <option>Female</option>
-              <option>Both</option>                            
+              <option>Both Male and Female</option>                            
             </select>
           </div>
           <div className="form-group">
-            <label style={{ color: "white" }}>Endlish Level</label>
+            <label style={{ color: "white" }}>English Level</label>
             <select
-              className="form-control"
+              className="form-control  text-black"
               onChange={(e) => setEnglishLevel(e.target.value)}
               required
             >

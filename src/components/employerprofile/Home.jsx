@@ -8,7 +8,8 @@
 
 import Dashboard from "./Dashboard";
 // import EmployerDashboard from "./EmployerDashboard";
-import Products from "./Products";
+import Candidates from "./Candidates";
+import PostJobs from "../employerprofile/PostJobs"
 
 
 // function Home() {
@@ -154,8 +155,9 @@ function Home({ activeSection }) { // Receive activeSection as props
       <main className='main-container'>
         {/* Conditionally render different sections based on activeSection */}
         {activeSection === 'Dashboard' && <Dashboard />}
-        {activeSection === 'Products' && <Products />}
-        {/* {activeSection === 'Categories' && <Categories />}
+        {activeSection === 'Candidates' && <Candidates />}
+        {activeSection === 'PostJobs' && <PostJobs />}
+        {/* 
         {activeSection === 'Customers' && <Customers />}
         {activeSection === 'Inventory' && <Inventory />}
         {activeSection === 'Reports' && <Reports />}

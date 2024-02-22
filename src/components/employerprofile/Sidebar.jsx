@@ -233,7 +233,14 @@
 
 // Sidebar.js
 import React from 'react';
-import { BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsListCheck, BsMenuButtonWideFill, BsFillGearFill, BsCart3 } from 'react-icons/bs';
+import { BsFillGearFill } from 'react-icons/bs';
+import GroupsIcon from '@mui/icons-material/Groups';
+import AppsIcon from '@mui/icons-material/Apps';
+import PostAddIcon from '@mui/icons-material/PostAdd';
+import ChecklistIcon from '@mui/icons-material/Checklist';
+import AnnouncementIcon from '@mui/icons-material/Announcement';
+import SendIcon from '@mui/icons-material/Send';
+import SettingsIcon from '@mui/icons-material/Settings';
 
 function Sidebar({ handleItemClick, activeSection , openSidebarToggle, OpenSidebar}) {
   return (
@@ -248,37 +255,37 @@ function Sidebar({ handleItemClick, activeSection , openSidebarToggle, OpenSideb
       <ul className='sidebar-list'>
         <li className={`sidebar-list-item ${activeSection === 'Dashboard' ? 'active' : ''}`} onClick={() => handleItemClick('Dashboard')}>
           <a className=''>
-            <BsGrid1X2Fill className='icon'/> Home
+            <AppsIcon className='icon'/> Home
           </a>
         </li>
-        <li className={`sidebar-list-item ${activeSection === 'Products' ? 'active' : ''}`} onClick={() => handleItemClick('Products')}>
+        <li className={`sidebar-list-item ${activeSection === 'Candidates' ? 'active' : ''}`} onClick={() => handleItemClick('Candidates')}>
           <a>
-            <BsFillArchiveFill className='icon'/> Candidates
+            <GroupsIcon className='icon'/> Candidates
           </a>
         </li>
-        <li className={`sidebar-list-item ${activeSection === 'Categories' ? 'active' : ''}`} onClick={() => handleItemClick('Categories')}>
+        <li className={`sidebar-list-item ${activeSection === 'PostJobs' ? 'active' : ''}`} onClick={() => handleItemClick('PostJobs')}>
           <a>
-            <BsFillGrid3X3GapFill className='icon'/> Post Job
+            <PostAddIcon className='icon'/> Post Job
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Customers' ? 'active' : ''}`} onClick={() => handleItemClick('Customers')}>
           <a>
-            <BsPeopleFill className='icon'/> Shortlisted
+            <ChecklistIcon className='icon'/> Shortlisted
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Inventory' ? 'active' : ''}`} onClick={() => handleItemClick('Inventory')}>
           <a>
-            <BsListCheck className='icon'/> Interview
+            <AnnouncementIcon className='icon'/> Interview
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Reports' ? 'active' : ''}`} onClick={() => handleItemClick('Reports')}>
           <a>
-            <BsMenuButtonWideFill className='icon'/> Message
+            <SendIcon className='icon'/> Message
           </a>
         </li>
         <li className={`sidebar-list-item ${activeSection === 'Settings' ? 'active' : ''}`} onClick={() => handleItemClick('Settings')}>
           <a>
-            <BsFillGearFill className='icon'/> Setting
+            <SettingsIcon className='icon'/> Setting
           </a>
         </li>
       </ul>

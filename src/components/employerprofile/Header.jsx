@@ -71,15 +71,15 @@ function Header({ OpenSidebar }) {
           placeholder="Search..."
           required
         />
-        <button
+        {/* <button
           type="submit"
           class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         >
           Search
-        </button>
+        </button> */}
       </div>
-      <div>
-        <IconButton size="large" aria-label="show 4 new mails" color="black">
+      <div className=" portrait:hidden">
+        <IconButton size="large" aria-label="show 4 new mails" color="black" >
           <Badge badgeContent={5} color="error">
             <MailIcon />
           </Badge>

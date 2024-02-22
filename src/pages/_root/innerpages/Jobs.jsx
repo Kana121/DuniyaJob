@@ -66,7 +66,7 @@ function Jobs() {
   return (
     <>
     <div>
-      <NavbarEmp/>
+      <NavbarEmp />
     </div>
       <div className="Jobs flex flex-col items-center text-gray-700">
         {/* search */} 

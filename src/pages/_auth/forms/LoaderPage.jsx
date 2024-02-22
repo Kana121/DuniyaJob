@@ -2,7 +2,7 @@
 
 import React from "react";
 import PreLoader from "../../../components/PreLoader";
-import logo from "../../../assets/dj-white.png";
+import logo from "../../../assets/dj-black.png";
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const LoaderPage = () => {
   };
   
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center text-white font-mono">
+    <div className="w-full h-screen flex flex-col justify-center items-center text-black font-mono">
       <img src={logo} alt="img" className="w-64" />
 
       <div className="flex flex-col items-center text-center mx-4 md:mx-auto md:max-w-2xl">
