@@ -5,6 +5,13 @@ import { Link } from "react-router-dom";
 import Footer from "../../../components/Footer";
 import MoveCandidate from "../../../components/MoveCandidate";
 import candidatesData from "../../../jsondata/candidate.json";
+// import { useEffect } from "react";
+// import Navbar from "../../../components/Navbar";
+// import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported
+// import { Link } from "react-router-dom";
+// import Footer from "../../../components/Footer";
+// import MoveCandidate from "../../../components/MoveCandidate";
+// import candidatesData from "../../../jsondata/candidate.json";
 
 const LandingPage = () => {
   // useEffect(() => {
@@ -19,7 +26,7 @@ const LandingPage = () => {
 
   return (
     <>
-      <div className=" overflow-y-scroll  ">
+      <div className=" overflow-y-scroll ">
         <section className="w-screen h-screen flex flex-col">
           <div className="sticky">
             <Navbar />
@@ -49,20 +56,12 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-
-        {/* <div className="moving flex items-center gap-14 animate-marquee absolute ">
-          <div className="flex">
-            {candidatesData.map((candidate) => (
-              <MoveCandidate key={candidate.id} candidate={candidate} />
-            ))}
-          </div>
-        </div> */}
-
-        {/* <div className="moving flex items-center gap-14  animate-marquee absolute overflow-x-hidden">
+        {/* <div className="moving flex items-center gap-14 animate-marquee absolute inset-x-0 bottom-0">
           {candidatesData.map((candidate) => (
             <MoveCandidate key={candidate.id} candidate={candidate} />
           ))}
-        </div> */}
+        </div>
+         */}
 
         <Footer />
       </div>
