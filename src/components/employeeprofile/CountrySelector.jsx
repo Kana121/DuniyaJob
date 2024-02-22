@@ -14,7 +14,7 @@ export default function ContrySelector(props) {
       {...other}
       sx={[{ display: { sm: 'contents' } }, ...(Array.isArray(sx) ? sx : [sx])]}
     >
-      <FormLabel>Country</FormLabel>
+      {/* <FormLabel>Country</FormLabel> */}
       <Autocomplete
         size="sm"
         autoHighlight

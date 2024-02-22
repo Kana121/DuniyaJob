@@ -50,6 +50,7 @@ import ErrorPage from './components/errorpage/ErrorPage'
 
 import ContactUs from "./pages/_root/footerpages/ContactUs";
 import EmployerDashboard from "./components/employerprofile/EmployerDashboard";
+import Home from "./components/employerprofile/Home";
 // import EmployerDashboard from "./pages/_root/innerpages/EmployerDashboard";
 // import Home from "./pages/_root/dashboardpages/Home";
 

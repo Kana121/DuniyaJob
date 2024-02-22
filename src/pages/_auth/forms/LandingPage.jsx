@@ -1,10 +1,17 @@
-import React, { useEffect } from 'react';
-import Navbar from '../../../components/Navbar';
-import '../../../styles/landing.css';  // Ensure that Tailwind CSS styles are imported
-import { Link } from 'react-router-dom';
-import Footer from '../../../components/Footer';
-import MoveCandidate from '../../../components/MoveCandidate';
-import candidatesData from '../../../jsondata/candidate.json';
+import React, { useEffect } from "react";
+import Navbar from "../../../components/Navbar";
+import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported
+import { Link } from "react-router-dom";
+import Footer from "../../../components/Footer";
+import MoveCandidate from "../../../components/MoveCandidate";
+import candidatesData from "../../../jsondata/candidate.json";
+// import { useEffect } from "react";
+// import Navbar from "../../../components/Navbar";
+// import "../../../styles/landing.css"; // Ensure that Tailwind CSS styles are imported
+// import { Link } from "react-router-dom";
+// import Footer from "../../../components/Footer";
+// import MoveCandidate from "../../../components/MoveCandidate";
+// import candidatesData from "../../../jsondata/candidate.json";
 
 const LandingPage = () => {
   // useEffect(() => {
@@ -17,15 +24,13 @@ const LandingPage = () => {
   //   };
   // }, []); // Empty dependency array ensures that the effect runs only once
 
-
   return (
     <>
-    <div className=' overflow-y-scroll '>
-      
-      <section className="w-screen h-screen flex flex-col">
-        <div className="sticky">
-          <Navbar />
-        </div>
+      <div className=" overflow-y-scroll ">
+        <section className="w-screen h-screen flex flex-col">
+          <div className="sticky">
+            <Navbar />
+          </div>
 
         <div className="flex-1 mt-4 flex items-center justify-center">
           <div className="banner-img">
@@ -59,10 +64,8 @@ const LandingPage = () => {
       ))} 
         </div> */}
 
-      <Footer />
-
-    </div>
-
+        <Footer />
+      </div>
     </>
   );
 };
