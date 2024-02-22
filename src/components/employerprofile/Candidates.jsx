@@ -1,7 +1,7 @@
 // CandidatePage.js
 import React from 'react';
 
-const CandidatePage = () => {
+const Candidates = () => {
   const candidate = {
     name: 'John Doe',
     title: 'Software Engineer',
@@ -84,4 +84,4 @@ const CandidatePage = () => {
   );
 };
 
-export default CandidatePage;
+export default Candidates;

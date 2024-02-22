@@ -11,6 +11,10 @@ import con from "../../../assets/contactuslogo.png";
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert from '@mui/material/Alert';
 import '../../../styles/contact.css';
+import Footer from "../../../components/Footer";
+
+
+
 
 
 
@@ -29,7 +33,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 
 
-function ContactUs() {
+function App() {
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
@@ -159,11 +163,11 @@ function ContactUs() {
 
   return (
     <div className="background-image">
-      <Container className='content'>
-        <Typography variant='h2' style={{ marginBottom: '20px', color: '#ff1744', textAlign: 'center', fontWeight: 'bold', fontSize: 50, fontFamily: 'Arial, sans-serif', marginTop: 10 }}>
+      <Container className='content' style={{height:1040}}>
+        <Typography variant='h2' style={{ marginBottom: '20px', color: 'orangered', textAlign: 'center', fontWeight: 'bold', fontSize: 50, fontFamily: 'Arial, sans-serif', marginTop: 10 }}>
           Contact Us
         </Typography>
-        <Typography variant='h6' style={{ marginBottom: '40px', color: '#fff', textAlign: 'center' }}>
+        <Typography variant='h6' style={{ marginBottom: '40px', color: 'black', textAlign: 'center' }}>
           This is the page that marks the beginning of your interactions with potential clients and partners.
         </Typography>
 
@@ -173,18 +177,18 @@ function ContactUs() {
           </div>
 
           <div className='Contact-form' style={{ marginLeft: 1, marginTop: -1, width: 450, height: 602, background: '#194A8D', padding: '20px', borderRadius: '1px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
-            <form style={{ display: 'flex', flexDirection: 'column', gap: '18px' }} onSubmit={handleSubmit}>
-              <Typography style={{ fontWeight: 'bold', fontSize: 30, color: 'white', textAlign: 'center' }}>
+            <form style={{ display: 'flex', flexDirection: 'column', gap: '18px', background:'#194A8D', marginTop:-20, marginLeft:-25, height:602 }} onSubmit={handleSubmit}>
+              <Typography style={{ fontWeight: 'bold', fontSize: 30, color: 'white', textAlign: 'center', marginTop:-10 }}>
                 Contact Form
               </Typography>
-              <FormGroup style={{ background: 'white', borderRadius: 25, height: 60, marginTop: 20 }}>
+              <FormGroup style={{ background: 'white', borderRadius: 25, height: 60, marginTop: 1 }}>
                 <FormControl style={{ margin: 'none' }}>
                   <InputLabel htmlFor="firstName" style={{ color: '#194A8D', marginTop: 8, height: 30 }}>First Name</InputLabel>
                   <Input
                     id="text"
                     type="Name"
                     placeholder="Enter your First Name"
-                    style={{ marginLeft: 25, color: 'black', width: 350, marginTop: 10, borderBottom: 'none', padding: '10px' }}
+                    style={{ marginLeft: 25, color: 'black', width: 300, marginTop: 10, borderBottom: 'none', padding: '10px' }}
                     onChange={handleFirstNameChange}
                     onBlur={validateFirstName}
                   />
@@ -202,7 +206,7 @@ function ContactUs() {
                     id="text"
                     type="Name"
                     placeholder="Enter your Last Name"
-                    style={{ marginLeft: 25, color: 'black', width: 350, marginTop: 10, borderBottom: 'none', padding: '10px' }}
+                    style={{ marginLeft: 25, color: 'black', width: 300, marginTop: 10, borderBottom: 'none', padding: '10px' }}
                     onChange={handleLastNameChange}
                     onBlur={validateLastName} />
                   {lastNameError && (
@@ -219,7 +223,7 @@ function ContactUs() {
                     id="email"
                     type="email"
                     placeholder="Enter your Email"
-                    style={{ marginLeft: 25, color: 'black', width: 350, marginTop: 10, borderBottom: 'none', padding: '10px' }}
+                    style={{ marginLeft: 25, color: 'black', width: 300, marginTop: 10, borderBottom: 'none', padding: '10px' }}
                     onChange={handleEmailChange}
                     onBlur={validateEmail}
                   />
@@ -238,7 +242,7 @@ function ContactUs() {
                     id="mobileNumber"
                     type="tel"
                     placeholder="Enter your Mobile Number"
-                    style={{ textAlign: 'center', marginLeft: 25, color: 'black', width: 350, marginTop: 10, borderBottom: 'none', padding: '10px' }}
+                    style={{ textAlign: 'center', marginLeft: 25, color: 'black', width: 300, marginTop: 10, borderBottom: 'none', padding: '10px' }}
                     onChange={handleMobileNumberChange}
                     onBlur={validateMobileNumber}
                   />
@@ -257,7 +261,7 @@ function ContactUs() {
                     id="message"
                     type="Name"
                     placeholder="Type Your Message"
-                    style={{ textAlign: 'center', marginLeft: 25, color: 'black', width: 350, marginTop: 10, borderBottom: 'none', padding: '10px' }}
+                    style={{ textAlign: 'center', marginLeft: 25, color: 'black', width: 300, marginTop: 10, borderBottom: 'none', padding: '10px' }}
                     onChange={handleMessageChange}
                     onBlur={validateMessage}
                   />
@@ -273,7 +277,7 @@ function ContactUs() {
   type="submit"
   variant="contained"
   color="primary"
-  style={{ alignSelf: 'flex-start', width: 400, marginTop: '10px', borderRadius: 25 }}
+  style={{ alignSelf: 'flex-start', width: 350, marginTop: '10px', borderRadius: 25 }}
 >
   Submit
 </Button>
@@ -281,11 +285,11 @@ function ContactUs() {
 <Button 
   type="button" 
   variant="contained"
-  color="secondary" 
-  style={{ alignSelf: 'flex-start', width: 400, marginTop: '1px', borderRadius: 25 }}
+  style={{ alignSelf: 'flex-start', width: 350, marginTop: '1px', borderRadius: 25, backgroundColor: '#ff4500', color: 'white' }}
 >
   Cancel
 </Button>
+
 
 </form>
 </div>
@@ -296,9 +300,6 @@ function ContactUs() {
 </Snackbar>
 
         </div>
-
-     
-
         <iframe
           className='map'
           style={{ marginTop: 50, marginLeft: -165 }}
@@ -311,8 +312,9 @@ function ContactUs() {
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </Container>
+      <Footer/>
     </div>
   );
 }
 
-export default ContactUs;
+export default App;

@@ -17,7 +17,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 // import NotificationsIcon from "@mui/icons-material/Notifications";
 // import MoreIcon from "@mui/icons-material/MoreVert";
 import { useNavigate } from "react-router-dom";
-import logo from "../assets/dj-white.png";
+import logo from "../assets/dj-black.png";
 
 // const Search = styled("div")(({ theme }) => ({
 //   position: "relative",
@@ -128,7 +128,7 @@ export default function Navbar() {
     >
     
       <MenuItem >
-        <Typography >Employee </Typography>
+        <Typography>Employee </Typography>
       </MenuItem>
 
       <MenuItem>
@@ -176,7 +176,7 @@ export default function Navbar() {
               display: { xs: 'none', sm: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 500,
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
               ":hover" :{textDecoration: 'underline'}
             }}
@@ -193,7 +193,7 @@ export default function Navbar() {
               display: { xs: 'none', sm: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 500,
-              color: 'inherit',
+              color: 'black',
               textDecoration: 'none',
               ":hover" :{textDecoration: 'underline'}
             }}

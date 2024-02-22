@@ -26,7 +26,7 @@ import ForgetPassword from "./pages/_auth/forms/ForgetPassword";
 import EmployeeProfile from "./pages/_root/innerpages/EmployeeProfile";
 import Notifications from "./pages/_root/footerpages/Notifications";
 import EmployerHome from "./pages/_root/innerpages/EmployerHome";
-import PostJobs from "./pages/_root/innerpages/PostJobs";
+import PostJobs from "./components/employerprofile/PostJobs";
 import ApplyForm from "./components/applyform/ApplyForm";
 import data from "./jsondata/csvjson.json";
 import TermsCondtions from "./pages/_root/footerpages/TermsConditions";
@@ -61,7 +61,7 @@ function App() {
   // }
   
   return (
-    <main className="flex-1 bg-gradient-to-r from-pink-300 via-teal-300 to-blue-300 overflow-x-hidden no-scrollbar justify-center align-middle" style={{ backgroundSize: '100% 100%' }}>
+    <main className="flex-1 bg-slate-200 overflow-x-hidden no-scrollbar justify-center align-middle" style={{ backgroundSize: '100% 100%' }}>
       <div>
           
     <Routes>
@@ -120,7 +120,7 @@ function App() {
 
         <Route path="/Application-tracking" element={<ApplicationTracker/>}/>
         <Route path="/Employee-dashboard" element={<EmployeeDashboard/>}/>
-        <Route path="/Dashboard-employer-Home" element={<Home/>}/>
+        {/* <Route path="/Dashboard-employer-Home" element={<Home/>}/> */}
         <Route path="/error-page" element={ <ErrorPage /> } />
         
         <Route path="/Employer-Dashboard" element={<EmployerDashboard />} />

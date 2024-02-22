@@ -1,0 +1,95 @@
+/* Default Styles */
+
+/* Tablet View */
+@media (max-width: 991px) {
+    /* .Container_1 {
+    } */
+   .background-image{
+    width: 100%;
+  overflow-x: hidden;
+  }
+   .image_1{
+    margin-left: -225px;
+   }
+    .Contact-form{
+      width: 300px;
+      padding-top: 10px;
+    }
+    form{
+      width: 320px;
+      margin-top: 10px;
+    }
+    .map {
+      padding-left: 160px;
+      margin-left: 10px;
+      width: 886px;
+      height: 300px;
+    }
+    .image_1 img {
+      width: 360px;
+      margin-top: 1px;
+      margin-left: -100px;
+      height: 400px;
+    }
+    Button {
+      width: 300px;
+      max-width:300px; 
+      padding: 10px;  
+  }
+  .Contact-form form Button {
+    max-width: 300px;
+  }
+  #mobileNumber::placeholder {
+    /* Adjust styles for medium-sized screens */
+    font-size: 4px;
+    max-width: 100px;
+  }
+  }
+  
+  /* Mobile View */
+  @media (max-width: 600px) {
+    .Container_1 {
+      margin-left: 0;
+      flex-direction: column;
+      align-items: center;
+    }
+    .background-image{
+      width: 100%;
+     
+    }
+  
+    .image_1 {
+      width: 100px;
+      margin-left: -258px;
+      margin-top: 30px;
+    }
+    .image_1 img {
+      width: 330px;
+      margin-top: 30px;
+    }
+  
+    .Contact-form{
+      width: 300px;
+    }
+    form{
+      width: 320px;
+    }
+    
+    .map {
+      padding-left: 160px;
+      width: 510px;
+      height: 300px;
+    }
+    FormGroup{
+      width: 200px;
+    }
+    Button {
+      width: 300px;
+      max-width:300px; 
+      padding: 10px; 
+    }
+  }
+  
+  /* Additional Responsive Adjustments */
+  /* Add your responsive styles here as needed */
+  
