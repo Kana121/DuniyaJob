@@ -1,30 +1,27 @@
 [
-    {
-      "id": 1,
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fujitsu-Logo.svg/2560px-Fujitsu-Logo.svg.png",
-      "interview": "Japanese tech giant specializing in IT equipment and services."
+  {
+    "id": 1,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Fujitsu-Logo.svg/2560px-Fujitsu-Logo.svg.png",
+    "interview": "Japanese tech giant specializing in IT equipment and services."
+  },
+  {
+      "id": 2,
+      "image": "https://logos-world.net/wp-content/uploads/2023/03/Cognizant-Logo.png",
+      "interview": "Leading Fortune 500 firm providing global Information Technology services."
     },
     {
-        "id": 2,
-        "image": "https://logos-world.net/wp-content/uploads/2023/03/Cognizant-Logo.png",
-        "interview": "Leading Fortune 500 firm providing global Information Technology services."
-      },
-      {
-        "id": 3,
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/768px-Tata_Consultancy_Services_Logo.svg.png",
-        "interview":"Multinational Information Technology powerhouse offering consulting."
-      },
-      {
-        "id": 4,
-        "image": "https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png",
-        "interview": "Global leader in consulting, technology, professional services."
-      },
-      {
-        "id": 5,
-        "image": "https://1000logos.net/wp-content/uploads/2021/04/Accenture-logo.png",
-        "interview": "World-renowned consulting and professional services with leading firm."
-      }
-
-    
-  ]
-  
+      "id": 3,
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Tata_Consultancy_Services_Logo.svg/768px-Tata_Consultancy_Services_Logo.svg.png",
+      "interview":"Multinational Information Technology powerhouse offering consulting."
+    },
+    {
+      "id": 4,
+      "image": "https://1000logos.net/wp-content/uploads/2021/08/Capgemini-Logo.png",
+      "interview": "Global leader in consulting, technology, professional services."
+    },
+    {
+      "id": 5,
+      "image": "https://1000logos.net/wp-content/uploads/2021/04/Accenture-logo.png",
+      "interview": "World-renowned consulting and professional services with leading firm."
+    }
+]
