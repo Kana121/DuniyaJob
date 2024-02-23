@@ -1,31 +1,39 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
+import React, { useState, useEffect } from 'react';
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import Typography from '@mui/joy/Typography';
 
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(4),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-}));
+const CheckProfile = () => {
+  const [profiles, setProfiles] = useState([]);
 
-export default function BasicStack() {
+  useEffect(() => {
+    // Load profiles from local storage
+    const loadedProfiles = JSON.parse(localStorage.getItem('profiles')) || [];
+    setProfiles(loadedProfiles);
+  }, []);
+
   return (
-    <>
-    <div className=' ml-10 mr-10 mt-10'>
-    <Box sx={{ width: '100%' }}>
-      <Stack spacing={2}>
-        <Item textAlign={"left"}>
-            1. Jinora Bolin
-        </Item>
-        <Item>Item 2</Item>
-        <Item>Item 3</Item>
-      </Stack>
+    <Box sx={{ padding: '20px' }}>
+      <Typography level="h4" component="h2" sx={{ mb: 2 }}>
+        Profiles
+      </Typography>
+      {profiles.map((profile) => (
+        <Card key={profile.id} sx={{ mb: 2, padding: '20px' }}>
+          <Typography level="h6">ID: {profile.id}</Typography>
+          <Typography>First Name: {profile.firstName}</Typography>
+          <Typography>Last Name: {profile.lastName}</Typography>
+          <Typography>Email: {profile.email}</Typography>
+          <Typography>Role: {profile.role}</Typography>
+          <Typography>Country: {profile.country}</Typography>
+          <Typography>Bio: {profile.bio}</Typography>
+          <Typography>Degree: {profile.degree}</Typography>
+          <Typography>Institution: {profile.institution}</Typography>
+          <Typography>Graduation Year: {profile.graduationYear}</Typography>
+          <Typography>GPA: {profile.gpa}</Typography>
+        </Card>
+      ))}
     </Box>
-    </div>
-    </>
   );
-}
+};
+
+export default CheckProfile;

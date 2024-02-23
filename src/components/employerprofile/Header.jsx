@@ -23,6 +23,7 @@
 // export default Header;
 
 // Header.js
+
 import React from "react";
 import { BsJustify } from "react-icons/bs";
 
@@ -34,7 +35,7 @@ import NotificationsIcon from '@mui/icons-material/Notifications';
 
 function Header({ OpenSidebar }) {
   return (
-    <header className="header">
+    <header className="header justify-between">
       <div className="menu-icon" onClick={OpenSidebar}>
         <BsJustify className="icon" />
       </div>
@@ -78,8 +79,8 @@ function Header({ OpenSidebar }) {
           Search
         </button> */}
       </div>
-      <div className=" portrait:hidden">
-        <IconButton size="large" aria-label="show 4 new mails" color="black" >
+      <div className="justify-end">
+        <IconButton size="large" aria-label="show 4 new mails" className=" self-end" color="black" >
           <Badge badgeContent={5} color="error">
             <MailIcon />
           </Badge>
